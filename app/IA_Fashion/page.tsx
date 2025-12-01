@@ -1,20 +1,29 @@
 "use client";
 
-import Header from "@/components/header";
 import Footer from "@/components/footer";
-import Image from "next/image";
+import Header from "@/components/header";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 /* ========================= HERO CAROUSEL ========================= */
 const carouselImages = [
   "/IA_fashion_home.svg",
-"/IA_fashion_calendar.svg",
+  "/IA_fashion_calendar.svg",
   "/IA_fashion_chat.svg",
 ];
 
 function HeroCarousel() {
   const totalWidth = carouselImages.length * 360;
+  const [innerWidth, setInnerWidth] = useState(0);
+
+  useEffect(() => {
+    const update = () => setInnerWidth(window.innerWidth || 0);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   return (
     <div className="w-full overflow-hidden mt-12">
@@ -22,7 +31,7 @@ function HeroCarousel() {
         className="flex gap-4 cursor-grab while-tap:cursor-grabbing"
         drag="x"
         dragConstraints={{
-          left: -totalWidth + window.innerWidth,
+          left: -totalWidth + innerWidth,
           right: 0,
         }}
         dragElastic={0.1}
@@ -81,8 +90,9 @@ export default function AIFashionCaseStudy() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            I designed a fictionnal UI/UX IA fashion app that helps people find style recommendations
-             being able to virtually try on clothes and get personalized outfit ideas using artificial intelligence.
+            I designed a fictionnal UI/UX IA fashion app that helps people find
+            style recommendations being able to virtually try on clothes and get
+            personalized outfit ideas using artificial intelligence.
           </motion.p>
 
           <HeroCarousel />
@@ -112,15 +122,18 @@ export default function AIFashionCaseStudy() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Through research including surveys and interviews with fashion shoppers, i manage to find some relevant points that could be resolved through my app.
+            Through research including surveys and interviews with fashion
+            shoppers, i manage to find some relevant points that could be
+            resolved through my app.
           </motion.p>
 
-         <ul className="list-disc list-inside text-lg text-black space-y-3">
-          <li>Users want personalized outfit suggestions.</li>
-          <li>Fashion professionals struggle to keep their schedules updated.</li>
-          <li>Retailers need smarter ways to showcase products with AI.</li>
-        </ul>
-
+          <ul className="list-disc list-inside text-lg text-black space-y-3">
+            <li>Users want personalized outfit suggestions.</li>
+            <li>
+              Fashion professionals struggle to keep their schedules updated.
+            </li>
+            <li>Retailers need smarter ways to showcase products with AI.</li>
+          </ul>
         </div>
 
         <motion.div
@@ -158,7 +171,8 @@ export default function AIFashionCaseStudy() {
         </motion.h2>
 
         <p className="text-center text-lg max-w-3xl mx-auto mb-12">
-          Thos are fictionnal personas that helped me define user needs and refine AI-powered features.
+          Thos are fictionnal personas that helped me define user needs and
+          refine AI-powered features.
         </p>
 
         <div className="grid md:grid-cols-3 gap-10">
@@ -183,8 +197,6 @@ export default function AIFashionCaseStudy() {
             painPoints="Low visibility, low engagement, and high returns"
             img="/woman.png"
           />
-
-
         </div>
       </section>
 
@@ -261,7 +273,8 @@ export default function AIFashionCaseStudy() {
       <section className="max-w-6xl mx-auto px-6 py-20 text-center">
         <h2 className="text-4xl font-bold mb-6">Next Steps</h2>
         <p className="text-lg max-w-3xl mx-auto">
-          Further user testing to refine AI recommendations and to improve the user flow of the app 
+          Further user testing to refine AI recommendations and to improve the
+          user flow of the app
         </p>
       </section>
 
@@ -335,9 +348,7 @@ function PrototypeCard({ img, title }: { img: string; title: string }) {
         alt={title}
         className="w-full h-auto"
       />
-      <h3 className="text-center font-semibold text-lg mt-2 mb-4">
-        {title}
-      </h3>
+      <h3 className="text-center font-semibold text-lg mt-2 mb-4">{title}</h3>
     </motion.div>
   );
 }

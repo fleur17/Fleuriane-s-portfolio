@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
+import { useState } from "react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -20,24 +20,29 @@ export default function ContactPage() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const mailtoLink = `mailto:fleurianelam77@hotmail.com?subject=Contact from ${encodeURIComponent(
-    formData.name
-  )}&body=${encodeURIComponent(
-    formData.message + "\n\nFrom: " + formData.email
-  )}`;
+    const mailtoLink = `mailto:fleurianelam77@hotmail.com?subject=Contact from ${encodeURIComponent(
+      formData.name
+    )}&body=${encodeURIComponent(
+      formData.message + "\n\nFrom: " + formData.email
+    )}`;
 
-  window.location.href = mailtoLink;
+    if (typeof window !== "undefined") {
+      window.location.href = mailtoLink;
+    } else {
+      // Fallback: if somehow this ran during SSR (shouldn't), we simply log the link
+      // so it can be used by the caller or during debugging.
+      // eslint-disable-next-line no-console
+      console.log("mailto link:", mailtoLink);
+    }
 
-  setSubmitted(true);
-  setFormData({ name: "", email: "", message: "" });
-};
-
+    setSubmitted(true);
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   return (
     <div className="relative min-h-screen bg-white">
-
       {/* --- STICKY HEADER --- */}
       <div className="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-90 backdrop-blur-sm">
         <Header />
@@ -45,7 +50,6 @@ export default function ContactPage() {
 
       {/* PAGE CONTENT */}
       <div className="px-6 pt-40 pb-52 max-w-2xl mx-auto">
-
         {/* TITLE */}
         <h1 className="font-['Shippori_Mincho_B1:ExtraBold'] text-[48px] text-black text-center tracking-wide">
           Contact
@@ -58,14 +62,12 @@ export default function ContactPage() {
 
         {/* FORM CONTAINER */}
         <div className="mt-20">
-
           {submitted ? (
             <p className="text-center text-black font-['Crimson_Text'] text-[22px]">
               Your message has been sent. Thank you.
             </p>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-10">
-
               {/* NAME */}
               <div className="flex flex-col gap-2">
                 <label className="font-['Shippori_Mincho_B1:Medium'] text-[18px] text-black">
@@ -127,16 +129,15 @@ export default function ContactPage() {
           )}
         </div>
         {/* FORM NOTE */}
-<p className="mt-6 text-center text-black font-['Crimson_Text'] text-[16px]">
-  Or contact me directly at{" "}
-  <a
-    href="mailto:fleurianelam77@hotmail.com"
-    className="underline hover:text-gray-700"
-  >
-    fleurianelam77@hotmail.com
-  </a>
-</p>
-
+        <p className="mt-6 text-center text-black font-['Crimson_Text'] text-[16px]">
+          Or contact me directly at{" "}
+          <a
+            href="mailto:fleurianelam77@hotmail.com"
+            className="underline hover:text-gray-700"
+          >
+            fleurianelam77@hotmail.com
+          </a>
+        </p>
       </div>
 
       {/* --- NORMAL FOOTER --- */}
