@@ -115,7 +115,7 @@ export default function NeuroportalPage() {
         <p className="text-lg max-w-[800px] text-center mb-10 z-10 relative">
           The EEG captures the frequency that changes in our brain and 
           TouchDesigner maps those signals into the moving visuals you see on the screen.
-          TouchDesigner allows us to connect with the EEG headset and translate the brainwave patterns particularlyn into visual forms.
+          TouchDesigner allows us to connect with the EEG headset and translate the brainwave patterns particularly into visual forms.
         </p>
 
         {/* Particle Canvas */}

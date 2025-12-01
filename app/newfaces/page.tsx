@@ -9,8 +9,8 @@ import { useEffect, useState } from "react";
 
 /* ========================= HERO CAROUSEL ========================= */
 const carouselImages = [
-  "/Home_page_newfaces.svg",
-  "/Courses_page.svg",
+  "/Home_Page_newfaces.svg",
+  "/Courses_Page.svg",
   "/portfolio_1.svg",
   "/final_page.svg",
 ];
@@ -184,7 +184,7 @@ export default function NewFacesUXPage() {
             age="28"
             goals="Get noticed by agencies quickly"
             painPoints="Unclear profile visibility and metrics"
-            img="/man .png"
+            img="/man.png"
           />
           <PersonaCard
             name="Agency Manager"
@@ -255,8 +255,8 @@ export default function NewFacesUXPage() {
         </p>
 
         <div className="flex justify-center flex-wrap gap-10">
-          <PrototypeCard img="/Home_page_newfaces.svg" title="Landing Page" />
-          <PrototypeCard img="/Courses_page.svg" title="Courses" />
+          <PrototypeCard img="/Home_Page_newfaces.svg" title="Landing Page" />
+          <PrototypeCard img="/Courses_Page.svg" title="Courses" />
           <PrototypeCard img="/portfolio_1.svg" title="Portfolio Detail" />
           <PrototypeCard img="/final_page.svg" title="Portfolio Detail" />
         </div>
