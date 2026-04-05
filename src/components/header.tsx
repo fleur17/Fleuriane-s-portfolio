@@ -41,7 +41,7 @@ export default function Header() {
           <Link href="/contact" className="hover:opacity-70">
             Contact
           </Link>
-          <Link href="/about_me" className="hover:opacity-70">
+          <Link href="/about-me" className="hover:opacity-70">
             About
           </Link>
         </nav>
@@ -72,7 +72,7 @@ export default function Header() {
             Contact
           </a>
           <a
-            href="/about_me"
+            href="/about-me"
             className="font-serif text-black transition-opacity hover:opacity-80"
           >
             About

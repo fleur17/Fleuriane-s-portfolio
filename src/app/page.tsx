@@ -54,7 +54,7 @@ export default function HomePage() {
             </p>
 
             <Link
-              href="/about_me"
+              href="/about-me"
               className="inline-block cursor-pointer px-0 py-3 font-bold text-black underline transition-opacity hover:opacity-80"
             >
               Read More
@@ -246,7 +246,7 @@ export default function HomePage() {
           </p>
 
           <Link
-            href="/IA_Fashion"
+            href="/ai-fashion"
             className="inline-block cursor-pointer bg-black px-6 py-3 font-bold text-white transition-opacity hover:opacity-80"
           >
             Read More

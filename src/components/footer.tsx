@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
 
 export default function Footer() {
   return (
@@ -10,7 +9,7 @@ export default function Footer() {
         {/* NAVIGATION */}
         <div className="mb-16 flex flex-wrap justify-center gap-10">
           <Link
-            href="/about_me"
+            href="/about-me"
             className="cursor-pointer font-serif text-2xl text-white transition-opacity hover:opacity-70 md:text-[29px]"
           >
             About

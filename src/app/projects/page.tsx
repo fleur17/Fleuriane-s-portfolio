@@ -67,8 +67,8 @@ function ProjectCard({
     neuroportal: "/neuroportal",
     elastup: "/elastup",
     "new-models": "/newfaces",
-    "images/projects/ai-fashion/ai-fashion": "/IA_Fashion",
-    "ui-projects": "/UI_projects",
+    "images/projects/ai-fashion/ai-fashion": "/ai-fashion",
+    "ui-projects": "/ui-projects",
   };
 
   return (
