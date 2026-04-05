@@ -1,9 +1,10 @@
 "use client";
 
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 /* ========================= UI IMAGES ========================= */
 const uiImages = [
@@ -17,29 +18,28 @@ const uiImages = [
 /* ========================= PAGE ========================= */
 export default function UIShowcasePage() {
   return (
-    <main className="w-full bg-white text-black font-serif">
+    <main className="w-full bg-white font-serif text-black">
       <Header />
 
       {/* ========================= PAGE HEADER ========================= */}
-      <section className="max-w-4xl mx-auto px-6 pt-24 text-center">
-        <h1 className="text-6xl font-bold mb-4">UI Showcase</h1>
-        <p className="text-lg text-gray-700 font-light">
-          Some concept designs and UI explorations I created as side projects 
-          
+      <section className="mx-auto max-w-4xl px-6 pt-24 text-center">
+        <h1 className="mb-4 text-6xl font-bold">UI Showcase</h1>
+        <p className="text-lg font-light text-gray-700">
+          Some concept designs and UI explorations I created as side projects
         </p>
       </section>
 
       {/* ========================= HERO IMAGE WALL ========================= */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-24">
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+          className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3"
           initial="hidden"
           animate="visible"
           variants={{
             hidden: {},
             visible: {
-              transition: { staggerChildren: 0.15 }
-            }
+              transition: { staggerChildren: 0.15 },
+            },
           }}
         >
           {uiImages.map((item, idx) => (
@@ -47,21 +47,21 @@ export default function UIShowcasePage() {
               key={idx}
               variants={{
                 hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0 }
+                visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300"
+              className="overflow-hidden rounded-3xl shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl"
             >
               <Image
                 src={item.src}
                 alt={item.label}
                 width={500}
                 height={700}
-                className="w-full h-auto object-cover"
+                className="h-auto w-full object-cover"
               />
 
               {/* DESCRIPTION */}
-              <div className="p-4 text-center bg-white">
+              <div className="bg-white p-4 text-center">
                 <p className="text-sm text-gray-700">{item.label}</p>
               </div>
             </motion.div>

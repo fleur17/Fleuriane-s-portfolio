@@ -1,11 +1,12 @@
 "use client";
 
-import Footer from "@/components/footer";
-import Header from "@/components/header";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 /* ========================= HERO CAROUSEL ========================= */
 const carouselImages = [
@@ -27,9 +28,9 @@ function HeroCarousel() {
   }, []);
 
   return (
-    <div className="w-full overflow-hidden mt-12">
+    <div className="mt-12 w-full overflow-hidden">
       <motion.div
-        className="flex gap-4 cursor-grab while-tap:cursor-grabbing"
+        className="while-tap:cursor-grabbing flex cursor-grab gap-4"
         drag="x"
         dragConstraints={{ left: -totalWidth + innerWidth, right: 0 }}
         dragElastic={0.1}
@@ -47,14 +48,14 @@ function HeroCarousel() {
         {carouselImages.concat(carouselImages).map((img, idx) => (
           <div
             key={idx}
-            className="flex-shrink-0 w-[250px] sm:w-[280px] md:w-[320px] lg:w-[350px]"
+            className="w-[250px] flex-shrink-0 sm:w-[280px] md:w-[320px] lg:w-[350px]"
           >
             <Image
               src={img}
               alt={`Interface ${idx + 1}`}
               width={350}
               height={500}
-              className="w-full h-auto object-cover rounded-2xl shadow-md"
+              className="h-auto w-full rounded-2xl object-cover shadow-md"
             />
           </div>
         ))}
@@ -66,14 +67,14 @@ function HeroCarousel() {
 /* ========================= MAIN PAGE ========================= */
 export default function NewFacesUXPage() {
   return (
-    <main className="w-full bg-white text-black font-serif">
+    <main className="w-full bg-white font-serif text-black">
       <Header />
 
       {/* ========================= HERO ========================= */}
-      <section className="relative w-full py-32 overflow-hidden bg-[#f4ede4]">
-        <div className="flex flex-col items-center max-w-6xl mx-auto px-6 gap-12 text-center">
+      <section className="relative w-full overflow-hidden bg-[#f4ede4] py-32">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 px-6 text-center">
           <motion.h1
-            className="text-5xl md:text-6xl font-bold leading-snug"
+            className="text-5xl leading-snug font-bold md:text-6xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -81,7 +82,7 @@ export default function NewFacesUXPage() {
             NewFaces — Your Fashion Learning Platform
           </motion.h1>
           <motion.p
-            className="text-lg md:text-xl max-w-3xl leading-relaxed"
+            className="max-w-3xl text-lg leading-relaxed md:text-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
@@ -96,13 +97,13 @@ export default function NewFacesUXPage() {
         </div>
       </section>
 
-      <div className="w-full h-[2px] bg-black my-14"></div>
+      <div className="my-14 h-[2px] w-full bg-black"></div>
 
       {/* ========================= USER RESEARCH ========================= */}
-      <section className="max-w-6xl mx-auto px-6 py-20 flex flex-col lg:flex-row gap-16">
+      <section className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-20 lg:flex-row">
         <div className="flex-1 space-y-6">
           <motion.h2
-            className="text-4xl font-bold mb-6"
+            className="mb-6 text-4xl font-bold"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -111,7 +112,7 @@ export default function NewFacesUXPage() {
             User Research & Insights
           </motion.h2>
           <motion.p
-            className="text-lg leading-relaxed max-w-md"
+            className="max-w-md text-lg leading-relaxed"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -122,7 +123,7 @@ export default function NewFacesUXPage() {
             emerged around profile discoverability, navigation, and visual
             clarity.
           </motion.p>
-          <ul className="list-disc list-inside text-lg text-black space-y-3">
+          <ul className="list-inside list-disc space-y-3 text-lg text-black">
             <li>Users struggle to quickly find relevant talent profiles.</li>
             <li>
               Mobile navigation is often cumbersome in existing platforms.
@@ -135,30 +136,30 @@ export default function NewFacesUXPage() {
         </div>
 
         <motion.div
-          className="flex-1 flex justify-center"
+          className="flex flex-1 justify-center"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="w-full max-w-[600px] bg-white shadow-lg rounded-3xl overflow-hidden hover:scale-105 transition-transform duration-500">
+          <div className="w-full max-w-[600px] overflow-hidden rounded-3xl bg-white shadow-lg transition-transform duration-500 hover:scale-105">
             <Image
               src="/desk.jpg"
               alt="User Research"
               width={200}
               height={200}
-              className="w-full h-auto object-cover"
+              className="h-auto w-full object-cover"
             />
           </div>
         </motion.div>
       </section>
 
-      <div className="w-full h-[2px] bg-black my-14"></div>
+      <div className="my-14 h-[2px] w-full bg-black"></div>
 
       {/* ========================= USER PERSONAS ========================= */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="mx-auto max-w-6xl px-6 py-20">
         <motion.h2
-          className="text-4xl font-bold text-center mb-6"
+          className="mb-6 text-center text-4xl font-bold"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -166,12 +167,12 @@ export default function NewFacesUXPage() {
         >
           User Personas
         </motion.h2>
-        <p className="text-center text-lg max-w-3xl mx-auto mb-12">
+        <p className="mx-auto mb-12 max-w-3xl text-center text-lg">
           Based on the research, I created detailed personas to guide design
           decisions.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid gap-10 md:grid-cols-3">
           <PersonaCard
             name="Emma, Model"
             age="24"
@@ -196,12 +197,12 @@ export default function NewFacesUXPage() {
         </div>
       </section>
 
-      <div className="w-full h-[2px] bg-black my-14"></div>
+      <div className="my-14 h-[2px] w-full bg-black"></div>
 
       {/* ========================= WIREFRAMES ========================= */}
 
       <motion.h2
-        className="text-4xl font-bold mb-6 text-center"
+        className="mb-6 text-center text-4xl font-bold"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -209,13 +210,13 @@ export default function NewFacesUXPage() {
       >
         Low-Fidelity Prototyping
       </motion.h2>
-      <p className="text-lg max-w-3xl mx-auto mb-12">
+      <p className="mx-auto mb-12 max-w-3xl text-lg">
         To quickly iterate on design concepts, I developed low-fidelity
         wireframes focusing on layout, navigation, and core functionalities.
       </p>
 
       <motion.div
-        className="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-8"
+        className="flex flex-col items-center justify-center gap-8 sm:flex-row sm:items-start"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -226,7 +227,7 @@ export default function NewFacesUXPage() {
           width={350}
           height={550}
           alt="Wireframe 1"
-          className="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500"
+          className="rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
         />
 
         <Image
@@ -234,14 +235,14 @@ export default function NewFacesUXPage() {
           width={350}
           height={550}
           alt="Wireframe 2"
-          className="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500"
+          className="rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
         />
       </motion.div>
 
       {/* ========================= PROTOTYPE ========================= */}
-      <section className="max-w-6xl mx-auto px-6 py-20 text-center">
+      <section className="mx-auto max-w-6xl px-6 py-20 text-center">
         <motion.h2
-          className="text-4xl font-bold mb-6"
+          className="mb-6 text-4xl font-bold"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -249,12 +250,12 @@ export default function NewFacesUXPage() {
         >
           High-Fidelity Prototyping
         </motion.h2>
-        <p className="text-lg max-w-3xl mx-auto mb-12">
+        <p className="mx-auto mb-12 max-w-3xl text-lg">
           Interactive prototypes were created to validate flows and test
           usability before development.
         </p>
 
-        <div className="flex justify-center flex-wrap gap-10">
+        <div className="flex flex-wrap justify-center gap-10">
           <PrototypeCard img="/Home_Page_newfaces.svg" title="Landing Page" />
           <PrototypeCard img="/Courses_Page.svg" title="Courses" />
           <PrototypeCard img="/portfolio_1.svg" title="Portfolio Detail" />
@@ -262,12 +263,12 @@ export default function NewFacesUXPage() {
         </div>
       </section>
 
-      <div className="w-full h-[2px] bg-black my-14"></div>
+      <div className="my-14 h-[2px] w-full bg-black"></div>
 
       {/* ========================= NEXT STEPS ========================= */}
-      <section className="max-w-6xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-4xl font-bold mb-6">Next Steps</h2>
-        <p className="text-lg max-w-3xl mx-auto">
+      <section className="mx-auto max-w-6xl px-6 py-20 text-center">
+        <h2 className="mb-6 text-4xl font-bold">Next Steps</h2>
+        <p className="mx-auto max-w-3xl text-lg">
           Conduct usability testing with real users, refine micro-interactions,
           and collaborate with developers to ensure design fidelity during
           implementation.
@@ -275,10 +276,10 @@ export default function NewFacesUXPage() {
       </section>
 
       {/* Back Button */}
-      <div className="w-full flex justify-center pb-20">
+      <div className="flex w-full justify-center pb-20">
         <Link
           href="/"
-          className="px-6 py-3 bg-black text-white font-bold hover:opacity-80 transition-opacity"
+          className="bg-black px-6 py-3 font-bold text-white transition-opacity hover:opacity-80"
         >
           Back to Home
         </Link>
@@ -301,7 +302,7 @@ interface PersonaCardProps {
 function PersonaCard({ name, age, goals, painPoints, img }: PersonaCardProps) {
   return (
     <motion.div
-      className="bg-[#fff] rounded-3xl shadow-lg p-6 text-center hover:shadow-xl hover:scale-105 transition-transform duration-300"
+      className="rounded-3xl bg-[#fff] p-6 text-center shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -311,9 +312,9 @@ function PersonaCard({ name, age, goals, painPoints, img }: PersonaCardProps) {
         width={200}
         height={200}
         alt={name}
-        className="rounded-full mx-auto mb-4"
+        className="mx-auto mb-4 rounded-full"
       />
-      <h3 className="font-bold text-xl">
+      <h3 className="text-xl font-bold">
         {name}, {age}
       </h3>
       <p className="mt-2 text-black">
@@ -329,7 +330,7 @@ function PersonaCard({ name, age, goals, painPoints, img }: PersonaCardProps) {
 function PrototypeCard({ img, title }: { img: string; title: string }) {
   return (
     <motion.div
-      className="rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300 w-[300px]"
+      className="w-[300px] overflow-hidden rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -339,9 +340,9 @@ function PrototypeCard({ img, title }: { img: string; title: string }) {
         width={300}
         height={500}
         alt={title}
-        className="w-full h-auto"
+        className="h-auto w-full"
       />
-      <h3 className="text-center font-semibold text-lg mt-2 mb-4">{title}</h3>
+      <h3 className="mt-2 mb-4 text-center text-lg font-semibold">{title}</h3>
     </motion.div>
   );
 }
