@@ -21,7 +21,7 @@ export default function AboutMePage() {
           {/* LEFT COLUMN — IMAGE */}
           <div className="flex justify-center md:justify-start">
             <Image
-              src="/photo_gallery.svg"
+              src="/images/about/photo-gallery.svg"
               alt="Portrait or creative image"
               width={900}
               height={1100}

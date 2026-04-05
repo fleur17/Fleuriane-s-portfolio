@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 import Footer from "@/components/footer";
 
@@ -29,7 +28,7 @@ export default function HomePage() {
           {/* Image */}
           <div className="flex w-full justify-center rounded-lg transition-transform duration-500 hover:scale-[1.02] md:w-1/2">
             <Image
-              src="/Home_page.svg"
+              src="/images/about/home-page.svg"
               alt="Fleuriane"
               width={510}
               height={718}
@@ -91,7 +90,7 @@ export default function HomePage() {
           </Link>
 
           <Image
-            src="/touchdesigner.svg"
+            src="/images/common/touchdesigner.svg"
             width={150}
             height={50}
             alt="Touchdesigner"
@@ -103,14 +102,14 @@ export default function HomePage() {
         <div className="group flex w-full flex-1 justify-center">
           <div className="w-full max-w-[650px] overflow-hidden rounded-lg bg-[#f4ede4] shadow-md">
             <Image
-              src="/Neuro.svg"
+              src="/images/projects/neuroportal/neuro.svg"
               alt="Neuro background"
               width={800}
               height={800}
               className="h-auto w-full object-cover group-hover:hidden"
             />
             <Image
-              src="/hover_neuro_home.svg"
+              src="/images/projects/neuroportal/hover-neuro-home.svg"
               alt="Neuro background hover"
               width={800}
               height={800}
@@ -133,7 +132,7 @@ export default function HomePage() {
         <div className="flex flex-1 justify-center">
           <div className="w-full max-w-[600px] overflow-hidden rounded-lg shadow-md">
             <Image
-              src="/elastup_group.svg"
+              src="/images/projects/elastup/elastup-group.svg"
               alt="Elastup"
               width={700}
               height={700}
@@ -160,7 +159,7 @@ export default function HomePage() {
           </Link>
 
           <Image
-            src="/kickstarter_logo.svg"
+            src="/images/common/kickstarter-logo.svg"
             width={200}
             height={100}
             alt="Kickstarter"
@@ -195,7 +194,7 @@ export default function HomePage() {
           </Link>
 
           <Image
-            src="/figma_logo.svg"
+            src="/images/common/figma-logo.svg"
             width={150}
             height={50}
             alt="Touchdesigner"
@@ -206,7 +205,7 @@ export default function HomePage() {
         <div className="flex w-full flex-1 justify-center">
           <div className="w-full max-w-[650px] overflow-hidden rounded-lg bg-white shadow-md">
             <Image
-              src="/newfaces.png"
+              src="/images/projects/newfaces/newfaces.png"
               alt="New Faces background"
               width={800}
               height={800}
@@ -228,7 +227,7 @@ export default function HomePage() {
         <div className="flex flex-1 justify-center">
           <div className="w-full max-w-[650px] overflow-hidden rounded-lg shadow-md">
             <Image
-              src="/IA-fashion.svg"
+              src="/images/projects/ai-fashion/ai-fashion.svg"
               alt="IA_fashion"
               width={800}
               height={800}
@@ -254,7 +253,7 @@ export default function HomePage() {
           </Link>
 
           <Image
-            src="/figma_logo.svg"
+            src="/images/common/figma-logo.svg"
             width={100}
             height={100}
             alt="Kickstarter"

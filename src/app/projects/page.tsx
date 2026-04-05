@@ -13,7 +13,7 @@ const projects = [
     category: "Art / UX Design",
     description:
       "A modern art-focused platform exploring interactive digital experiences.",
-    image: "/3.png",
+    image: "/images/projects/neuroportal/neuroportal.png",
   },
   {
     slug: "elastup",
@@ -21,7 +21,7 @@ const projects = [
     category: "Business / UX Design",
     description:
       "A kickstarter project that turns cutlery holder into a fashion project.",
-    image: "/1.png",
+    image: "/images/projects/elastup/elastup.png",
   },
   {
     slug: "new-models",
@@ -29,15 +29,15 @@ const projects = [
     category: "App / UX-UI Design",
     description:
       "A platform connecting models with agencies while giving fashion courses.",
-    image: "/Home_Page_new_version.svg",
+    image: "/images/projects/newfaces/home-page.svg",
   },
   {
-    slug: "ia-fashion",
+    slug: "images/projects/ai-fashion/ai-fashion",
     title: "IA Fashion",
     category: "App / UI-UX Design",
     description:
       "An app that help users to discover fashion styles using AI technology.",
-    image: "/IA_fashion_home.svg",
+    image: "/images/projects/ai-fashion/home.svg",
   },
   {
     slug: "ui-projects",
@@ -45,7 +45,7 @@ const projects = [
     category: "Social media app / UI Design",
     description:
       "Some of my side UI/UX project design works for fictionnal apps.",
-    image: "/Nadz_model.svg",
+    image: "/images/projects/ui-projects/nadz-model.svg",
   },
 ];
 
@@ -67,7 +67,7 @@ function ProjectCard({
     neuroportal: "/neuroportal",
     elastup: "/elastup",
     "new-models": "/newfaces",
-    "ia-fashion": "/IA_Fashion",
+    "images/projects/ai-fashion/ai-fashion": "/IA_Fashion",
     "ui-projects": "/UI_projects",
   };
 

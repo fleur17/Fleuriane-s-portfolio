@@ -16,7 +16,7 @@ export default function Header() {
         <div className="mt-4 flex items-center gap-8">
           <Link href="/">
             <Image
-              src="/Lofog_F.svg"
+              src="/images/common/logo-f.svg"
               alt="Logo"
               width={100}
               height={100}

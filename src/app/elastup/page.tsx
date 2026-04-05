@@ -17,7 +17,9 @@ export default function ElastupPage() {
       {/* ================= HERO ================= */}
       <section
         className="w-full bg-cover bg-center bg-no-repeat py-32 text-center md:py-40"
-        style={{ backgroundImage: "url('/Bg_elastup.svg')" }}
+        style={{
+          backgroundImage: "url('/images/projects/elastup/background.svg')",
+        }}
       >
         <h1 className="font-serif text-6xl font-bold drop-shadow-lg">
           Elastup
@@ -67,7 +69,7 @@ export default function ElastupPage() {
         {/* Full-width Elastup Image */}
         <div className="mt-10 flex w-full justify-center md:col-span-2">
           <Image
-            src="/group_elastup.svg"
+            src="/images/projects/elastup/elastup-group-2.svg"
             alt="Elastup Showcase"
             width={2000}
             height={800}
@@ -98,7 +100,7 @@ export default function ElastupPage() {
 
         <div className="mt-10 flex w-full justify-center">
           <Image
-            src="/design_process.svg"
+            src="/images/projects/elastup/design-process.svg"
             alt="Prototype 1"
             width={2000}
             height={800}
@@ -108,7 +110,7 @@ export default function ElastupPage() {
 
         <div className="mt-10 flex w-full justify-center">
           <Image
-            src="/prototypes.svg"
+            src="/images/projects/elastup/prototypes.svg"
             alt="Prototype 2"
             width={2000}
             height={800}
@@ -124,21 +126,21 @@ export default function ElastupPage() {
         <h2 className="mb-6 text-5xl font-bold">Posters of our campaign</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-10">
           <Image
-            src="/blue_elastup.svg"
+            src="/images/projects/elastup/blue-elastup.svg"
             width={400}
             height={600}
             alt="Poster 1"
             className="h-auto w-[400px] max-w-full rounded-lg"
           />
           <Image
-            src="/grey_elastup.svg"
+            src="/images/projects/elastup/grey-elastup.svg"
             width={400}
             height={600}
             alt="Poster 2"
             className="h-auto w-[400px] max-w-full rounded-lg"
           />
           <Image
-            src="/green_elastup.svg"
+            src="/images/projects/elastup/green-elastup.svg"
             width={400}
             height={600}
             alt="Poster 3"
@@ -155,7 +157,7 @@ export default function ElastupPage() {
 
         {isPlaying ? (
           <video
-            src="/video_elastup/video_elastup.mp4"
+            src="/videos/projects/elastup/elastup.mp4"
             controls
             autoPlay
             className="mx-auto h-auto w-[800px] max-w-full rounded-lg"
@@ -166,7 +168,7 @@ export default function ElastupPage() {
             onClick={() => setIsPlaying(true)}
           >
             <Image
-              src="/play_video.svg"
+              src="/images/projects/elastup/play-video.svg"
               alt="Video Preview"
               width={800}
               height={450}

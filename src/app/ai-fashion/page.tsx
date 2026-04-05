@@ -10,9 +10,9 @@ import Header from "@/components/header";
 
 /* ========================= HERO CAROUSEL ========================= */
 const carouselImages = [
-  "/IA_fashion_home.svg",
-  "/IA_fashion_calendar.svg",
-  "/IA_fashion_chat.svg",
+  "/images/projects/ai-fashion/home.svg",
+  "/images/projects/ai-fashion/calendar.svg",
+  "/images/projects/ai-fashion/chat.svg",
 ];
 
 function HeroCarousel() {
@@ -146,7 +146,7 @@ export default function AIFashionCaseStudy() {
         >
           <div className="w-full max-w-[600px] overflow-hidden rounded-3xl bg-white shadow-lg transition-transform duration-500 hover:scale-105">
             <Image
-              src="/desk.jpg"
+              src="/images/common/desk.jpg"
               alt="AI Fashion research"
               width={200}
               height={200}
@@ -182,21 +182,21 @@ export default function AIFashionCaseStudy() {
             age="22"
             goals="Discover new outfits instantly using AI"
             painPoints="Hard to match clothes with her style"
-            img="/woman.png"
+            img="/images/common/woman.png"
           />
           <PersonaCard
             name="Daniel, Profesional model"
             age="30"
             goals="Being more informed about the fashion world"
             painPoints="Not enough time to stay properly informed"
-            img="/man.png"
+            img="/images/common/man.png"
           />
           <PersonaCard
             name="Retail Fashion Manager"
             age="38"
             goals="Improve product visibility and boost customer engagement with AI styling"
             painPoints="Low visibility, low engagement, and high returns"
-            img="/woman.png"
+            img="/images/common/woman.png"
           />
         </div>
       </section>
@@ -227,7 +227,7 @@ export default function AIFashionCaseStudy() {
         transition={{ duration: 0.8 }}
       >
         <Image
-          src="/IA_fashion_home_proto.svg"
+          src="/images/projects/ai-fashion/home_proto.svg"
           width={350}
           height={550}
           alt="Wireframe 1"
@@ -235,7 +235,7 @@ export default function AIFashionCaseStudy() {
         />
 
         <Image
-          src="/IA_fashion_calendar_proto.svg"
+          src="/images/projects/ai-fashion/calendar-proto.svg"
           width={350}
           height={550}
           alt="Wireframe 2"
@@ -261,9 +261,18 @@ export default function AIFashionCaseStudy() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-10">
-          <PrototypeCard img="/IA_fashion_home.svg" title="Home page" />
-          <PrototypeCard img="/IA_fashion_calendar.svg" title="Calendar page" />
-          <PrototypeCard img="/IA_fashion_chat.svg" title="Chatbot page" />
+          <PrototypeCard
+            img="/images/projects/ai-fashion/home.svg"
+            title="Home page"
+          />
+          <PrototypeCard
+            img="/images/projects/ai-fashion/calendar.svg"
+            title="Calendar page"
+          />
+          <PrototypeCard
+            img="/images/projects/ai-fashion/chat.svg"
+            title="Chatbot page"
+          />
         </div>
       </section>
 

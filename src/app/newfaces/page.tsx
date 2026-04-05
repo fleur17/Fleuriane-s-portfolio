@@ -10,10 +10,10 @@ import Header from "@/components/header";
 
 /* ========================= HERO CAROUSEL ========================= */
 const carouselImages = [
-  "/Home_Page_newfaces.svg",
-  "/Courses_Page.svg",
-  "/portfolio_1.svg",
-  "/final_page.svg",
+  "/images/projects/newfaces/home-page-2.svg",
+  "/images/projects/newfaces/courses-page.svg",
+  "/images/projects/newfaces/portfolio.svg",
+  "/images/projects/newfaces/final-page.svg",
 ];
 
 function HeroCarousel() {
@@ -144,7 +144,7 @@ export default function NewFacesUXPage() {
         >
           <div className="w-full max-w-[600px] overflow-hidden rounded-3xl bg-white shadow-lg transition-transform duration-500 hover:scale-105">
             <Image
-              src="/desk.jpg"
+              src="/images/common/desk.jpg"
               alt="User Research"
               width={200}
               height={200}
@@ -178,21 +178,21 @@ export default function NewFacesUXPage() {
             age="24"
             goals="Find opportunities and showcase portfolio easily"
             painPoints="Navigation confusion, poor image layout"
-            img="/woman.png"
+            img="/images/common/woman.png"
           />
           <PersonaCard
             name="Lucas, Actor"
             age="28"
             goals="Get noticed by agencies quickly"
             painPoints="Unclear profile visibility and metrics"
-            img="/man.png"
+            img="/images/common/man.png"
           />
           <PersonaCard
             name="Agency Manager"
             age="35"
             goals="Efficiently discover and manage talent"
             painPoints="Difficult filtering and slow loading profiles"
-            img="/woman.png"
+            img="/images/common/woman.png"
           />
         </div>
       </section>
@@ -223,7 +223,7 @@ export default function NewFacesUXPage() {
         transition={{ duration: 0.8 }}
       >
         <Image
-          src="/proto_1_new.svg"
+          src="images/projects/newfaces/proto-1.svg"
           width={350}
           height={550}
           alt="Wireframe 1"
@@ -231,7 +231,7 @@ export default function NewFacesUXPage() {
         />
 
         <Image
-          src="/proto_2_new.svg"
+          src="/images/projects/newfaces/proto-2.svg"
           width={350}
           height={550}
           alt="Wireframe 2"
@@ -256,10 +256,22 @@ export default function NewFacesUXPage() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-10">
-          <PrototypeCard img="/Home_Page_newfaces.svg" title="Landing Page" />
-          <PrototypeCard img="/Courses_Page.svg" title="Courses" />
-          <PrototypeCard img="/portfolio_1.svg" title="Portfolio Detail" />
-          <PrototypeCard img="/final_page.svg" title="Portfolio Detail" />
+          <PrototypeCard
+            img="/images/projects/newfaces/home-page-2.svg"
+            title="Landing Page"
+          />
+          <PrototypeCard
+            img="/images/projects/newfaces/courses-page.svg"
+            title="Courses"
+          />
+          <PrototypeCard
+            img="/images/projects/newfaces/portfolio.svg"
+            title="Portfolio Detail"
+          />
+          <PrototypeCard
+            img="/images/projects/newfaces/final-page.svg"
+            title="Portfolio Detail"
+          />
         </div>
       </section>
 
