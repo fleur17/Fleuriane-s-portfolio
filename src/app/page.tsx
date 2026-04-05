@@ -3,18 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 
-import Header from "../components/header";
-//import { useRouter } from "next/navigation";
+import Header from "../components/Header";
 
 export default function HomePage() {
-  //const router = useRouter();
-
-  //function onNavigate(path: string) {
-  // router.push("/" + path.toLowerCase());
-  //}
-
   return (
     <main className="w-full">
       {/* HEADER */}
