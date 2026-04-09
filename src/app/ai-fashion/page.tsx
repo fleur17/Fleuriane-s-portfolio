@@ -74,7 +74,7 @@ export default function AIFashionCaseStudy() {
       <Header />
 
       {/* ========================= HERO ========================= */}
-      <section className="relative w-full overflow-hidden bg-[#f4ede4] py-32">
+      <section className="bg-beige relative w-full overflow-hidden py-32">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 px-6 text-center">
           <motion.h1
             className="text-5xl leading-snug font-bold md:text-6xl"
@@ -316,7 +316,7 @@ interface PersonaCardProps {
 function PersonaCard({ name, age, goals, painPoints, img }: PersonaCardProps) {
   return (
     <motion.div
-      className="rounded-3xl bg-[#fff] p-6 text-center shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+      className="rounded-3xl bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

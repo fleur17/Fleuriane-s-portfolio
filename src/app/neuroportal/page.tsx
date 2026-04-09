@@ -177,7 +177,7 @@ export default function NeuroportalPage() {
       <div className="my-14 h-[2px] w-full bg-black"></div>
 
       {/* Beige Section */}
-      <div className="w-full bg-[#f4ede4] py-16">
+      <div className="bg-beige w-full py-16">
         <div className="mx-auto grid max-w-5xl gap-10 px-6 md:grid-cols-2 md:divide-x md:divide-black">
           <p className="font-serif text-lg leading-relaxed text-black">
             The opening of the door reflects the act of entering the visual

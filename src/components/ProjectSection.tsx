@@ -48,7 +48,7 @@ export default function ProjectSection({ project }: ProjectSectionProps) {
       <div
         className={`group flex w-full flex-1 justify-center ${project.textSection.position === "left" ? "lg:order-2" : "lg:order-1"}`}
       >
-        <div className="w-full max-w-162.5 overflow-hidden rounded-lg bg-[#f4ede4] shadow-md">
+        <div className="bg-beige w-full max-w-162.5 overflow-hidden rounded-lg shadow-md">
           {project.imageSection.map((image) => {
             return (
               <Image
