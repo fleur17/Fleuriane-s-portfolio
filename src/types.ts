@@ -17,3 +17,8 @@ export interface ProjectData {
   };
   imageSection: ImageType[];
 }
+
+export type NavLink = {
+  href: string;
+  label: string;
+};
