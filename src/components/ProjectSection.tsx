@@ -9,10 +9,14 @@ interface ProjectSectionProps {
 
 export default function ProjectSection({ project }: ProjectSectionProps) {
   return (
-    <section className="relative mx-auto flex max-w-350 flex-col items-center gap-16 px-6 py-10 lg:flex-row">
-      {/* <p className="font-serif text-[16px] tracking-[4px] text-black uppercase lg:absolute lg:top-4 lg:-left-10 lg:-rotate-90">
+    <section className="relative mx-auto flex max-w-350 flex-col items-center gap-16 px-6 py-30 lg:flex-row">
+      <p
+        className={`font-serif text-[16px] tracking-[4px] text-black uppercase lg:absolute lg:top-6 lg:rotate-180 lg:[writing-mode:vertical-rl] ${
+          project.textSection.position === "left" ? "lg:left-5" : "lg:right-5"
+        }`}
+      >
         {project.textSection.projectType}
-      </p> */}
+      </p>
 
       <div
         className={`mt-10 flex-1 space-y-6 lg:ml-25 ${project.textSection.position === "left" ? "lg:order-1" : "lg:order-2"}`}
@@ -37,7 +41,7 @@ export default function ProjectSection({ project }: ProjectSectionProps) {
           width={project.textSection.image.width}
           height={project.textSection.image.height}
           alt={project.textSection.image.alt}
-          className={`h-auto w-auto ${project.textSection.image.className ?? ""} ${project.textSection.position === "left" ? "mt-4" : "lg:-ml-3"}`}
+          className="mt-4 h-auto w-auto"
         />
       </div>
 

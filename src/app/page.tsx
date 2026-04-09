@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <main className="w-full">
       <HomePageHero />
-      <div className="my-20 h-5 w-full bg-black"></div>
+      <div className="h-5 w-full bg-black"></div>
 
       {projects.map((project, index) => {
         return (

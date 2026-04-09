@@ -23,6 +23,7 @@ export default function Header() {
               alt="Logo"
               width={100}
               height={100}
+              style={{ width: 100, height: 122 }}
               className="cursor-pointer object-contain"
             />
           </Link>
