@@ -5,7 +5,7 @@ import { Fragment } from "react/jsx-runtime";
 import HomePageHero from "@/components/HomePageHero";
 import ProjectSection from "@/components/ProjectSection";
 import Separator from "@/components/Separator";
-import { projects } from "@/data/projects";
+import { projectsShowcases } from "@/data/projects";
 
 export default function HomePage() {
   return (
@@ -13,11 +13,11 @@ export default function HomePage() {
       <HomePageHero />
       <div className="h-5 w-full bg-black"></div>
 
-      {projects.map((project, index) => {
+      {projectsShowcases.map((project, index) => {
         return (
           <Fragment key={project.textSection.name}>
             <ProjectSection project={project} />
-            {index < projects.length - 1 && <Separator />}
+            {index < projectsShowcases.length - 1 && <Separator />}
           </Fragment>
         );
       })}
