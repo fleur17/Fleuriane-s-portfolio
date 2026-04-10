@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 
 import HeroCarousel from "@/components/HeroCarousel";
+import Media from "@/components/Media";
 import PersonaCard from "@/components/PersonaCard";
 import PrototypeCard from "@/components/PrototypeCard";
 import Separator from "@/components/Separator";
@@ -74,7 +74,7 @@ export default function AppProjectPage({ project }: AppProjectPageProps) {
           transition={{ duration: 0.8 }}
         >
           <div className="w-full max-w-150 overflow-hidden rounded-3xl bg-white shadow-lg transition-transform duration-500 hover:scale-105">
-            <Image
+            <Media
               src={project.researchInsights.media.src}
               alt={project.researchInsights.media.alt ?? ""}
               width={project.researchInsights.media.width ?? 200}
@@ -142,7 +142,7 @@ export default function AppProjectPage({ project }: AppProjectPageProps) {
         >
           {project.lowFidelityPrototyping.medias.map((image, idx) => {
             return (
-              <Image
+              <Media
                 key={idx}
                 src={image.src}
                 width={image.width ?? 350}

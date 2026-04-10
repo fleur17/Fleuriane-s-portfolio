@@ -1,11 +1,11 @@
 "use client";
 
 import { Menu } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
 import CustomLink from "@/components/CustomLink";
+import Media from "@/components/Media";
 import Navbar from "@/components/Navbar";
 
 export default function Header() {
@@ -18,13 +18,12 @@ export default function Header() {
       <div className="mx-auto flex w-[95%] max-w-480 items-center justify-between py-1">
         <div className="flex items-center gap-8">
           <Link href="/">
-            <Image
+            <Media
               src="/images/common/logo-f.svg"
               alt="Logo"
-              width={100}
-              height={100}
-              style={{ width: 100, height: 122 }}
-              className="cursor-pointer object-contain"
+              width={165}
+              height={202}
+              className="w-25 cursor-pointer object-contain"
             />
           </Link>
 

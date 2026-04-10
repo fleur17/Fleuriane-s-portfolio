@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
+import Media from "@/components/Media";
 import { MediaType } from "@/types";
 
 interface HeroCarouselProps {
@@ -42,7 +42,7 @@ export default function HeroCarousel({ carousel }: HeroCarouselProps) {
             key={idx}
             className="w-62.5 shrink-0 sm:w-70 md:w-[320px] lg:w-87.5"
           >
-            <Image
+            <Media
               src={img.src}
               alt={img.alt ?? `Interface ${idx + 1}`}
               width={img.width ?? 350}

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
 
+import Media from "@/components/Media";
 import { MediaType } from "@/types";
 
 interface PrototypeCardProps {
@@ -15,7 +15,7 @@ export default function PrototypeCard({ image }: PrototypeCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
     >
-      <Image
+      <Media
         src={image.src}
         width={image.width ?? 300}
         height={image.height ?? 500}

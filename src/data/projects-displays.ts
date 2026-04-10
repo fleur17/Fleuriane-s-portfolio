@@ -108,7 +108,7 @@ export const projectsDisplays: ProjectDisplayData[] = [
       description:
         "Materializing collective emotions through an embodied robotic metaphor",
       href: "/teru-bot",
-      image: {
+      media: {
         src: "/images/common/figma-logo.svg",
         width: 150,
         height: 50,
@@ -116,7 +116,7 @@ export const projectsDisplays: ProjectDisplayData[] = [
       },
       position: "left",
     },
-    imageSection: [
+    mediaSection: [
       {
         src: "/images/projects/teru-bot/teru-bot-1.jpg",
         alt: "TeruBot",

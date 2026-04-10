@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+
+import Media from "@/components/Media";
 
 export default function HomePageHero() {
   return (
@@ -8,12 +9,11 @@ export default function HomePageHero() {
 
       <div className="mx-auto mt-10 flex max-w-300 flex-col items-center justify-center gap-12 px-6 md:flex-row">
         <div className="flex w-full justify-center rounded-lg transition-transform duration-500 hover:scale-[1.02] md:w-1/2">
-          <Image
+          <Media
             src="/images/about/home-page.svg"
             alt="Fleuriane"
             width={510}
             height={718}
-            priority
             className="h-auto w-full max-w-95 rounded-lg md:max-w-none"
           />
         </div>

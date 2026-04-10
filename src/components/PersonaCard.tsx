@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
+
+import Media from "@/components/Media";
 
 interface PersonaCardProps {
   name: string;
@@ -23,7 +24,7 @@ export default function PersonaCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
     >
-      <Image
+      <Media
         src={img}
         width={200}
         height={200}
