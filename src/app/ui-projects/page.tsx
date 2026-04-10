@@ -3,9 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-
 /* ========================= UI IMAGES ========================= */
 const uiImages = [
   {
@@ -34,9 +31,6 @@ const uiImages = [
 export default function UIShowcasePage() {
   return (
     <main className="w-full bg-white font-serif text-black">
-      <Header />
-
-      {/* ========================= PAGE HEADER ========================= */}
       <section className="mx-auto max-w-4xl px-6 pt-24 text-center">
         <h1 className="mb-4 text-6xl font-bold">UI Showcase</h1>
         <p className="text-lg font-light text-gray-700">
@@ -83,8 +77,6 @@ export default function UIShowcasePage() {
           ))}
         </motion.div>
       </section>
-
-      <Footer />
     </main>
   );
 }

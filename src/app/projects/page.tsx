@@ -2,9 +2,6 @@
 
 import Link from "next/link";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-
 /* --------------------------- PROJECT DATA --------------------------- */
 const projects = [
   {
@@ -99,7 +96,6 @@ function ProjectCard({
 export default function UXUIProjects() {
   return (
     <div className="flex min-h-screen flex-col bg-white">
-      <Header />
       <main className="mx-auto max-w-[1440px] flex-1 px-8 py-16">
         <section className="mb-16 text-center">
           <h1 className="mb-4 font-['Shippori_Mincho_B1:ExtraBold'] text-5xl text-black">
@@ -125,7 +121,6 @@ export default function UXUIProjects() {
           ))}
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

@@ -5,9 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-
 /* ========================= HERO CAROUSEL ========================= */
 const carouselImages = [
   "/images/projects/newfaces/home-page-2.svg",
@@ -68,8 +65,6 @@ function HeroCarousel() {
 export default function NewFacesUXPage() {
   return (
     <main className="w-full bg-white font-serif text-black">
-      <Header />
-
       {/* ========================= HERO ========================= */}
       <section className="bg-beige relative w-full overflow-hidden py-32">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 px-6 text-center">
@@ -296,8 +291,6 @@ export default function NewFacesUXPage() {
           Back to Home
         </Link>
       </div>
-
-      <Footer />
     </main>
   );
 }
