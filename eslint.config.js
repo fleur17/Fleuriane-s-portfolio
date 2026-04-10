@@ -10,7 +10,7 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 
 export default defineConfig([
-  globalIgnores(["dist"]),
+  globalIgnores(["dist", ".next", "node_modules", "out"]),
 
   {
     files: ["**/*.{ts,tsx}"],
@@ -36,9 +36,7 @@ export default defineConfig([
 
     settings: {
       "import/resolver": {
-        typescript: {
-          project: resolve(__dirname, "tsconfig.json"),
-        },
+        typescript: true,
       },
     },
 

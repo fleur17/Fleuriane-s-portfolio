@@ -1,10 +1,11 @@
 "use client";
 
+import { Fragment } from "react/jsx-runtime";
+
 import HomePageHero from "@/components/HomePageHero";
 import ProjectSection from "@/components/ProjectSection";
 import Separator from "@/components/Separator";
 import { projects } from "@/data/projects";
-import { Fragment } from "react/jsx-runtime";
 
 export default function HomePage() {
   return (
