@@ -4,12 +4,8 @@ import { notFound } from "next/navigation";
 import { use } from "react";
 
 import AppProjectPage from "@/components/pages/AppProjectPage";
+import BusinessProjectPage from "@/components/pages/BusinessProjectPage";
 import { projects } from "@/data/projects";
-import { LayoutKey } from "@/types";
-
-const layouts = {
-  "app-project": AppProjectPage,
-};
 
 export default function ProjectPage({
   params,
@@ -23,6 +19,12 @@ export default function ProjectPage({
     notFound();
   }
 
-  const Layout = layouts[project.layout as LayoutKey];
-  return <Layout project={project} />;
+  switch (project.layout) {
+    case "app-project":
+      return <AppProjectPage project={project} />;
+    case "business-project":
+      return <BusinessProjectPage project={project} />;
+    default:
+      notFound();
+  }
 }
