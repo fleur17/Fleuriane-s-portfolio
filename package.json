@@ -2,7 +2,7 @@
   "name": "fleuriane_portfolio",
   "type": "module",
   "version": "0.1.0",
-  "homepage": "https://fleur17.github.io/portfolio",
+  "homepage": "https://fleuriane-s-portfolio.vercel.app/",
   "private": true,
   "scripts": {
     "dev": "next dev",
