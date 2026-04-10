@@ -5,6 +5,7 @@ import Link from "next/link";
 import HeroCarousel from "@/components/HeroCarousel";
 import PersonaCard from "@/components/PersonaCard";
 import PrototypeCard from "@/components/PrototypeCard";
+import Separator from "@/components/Separator";
 import { AppProject } from "@/types";
 
 interface AppProjectPageProps {
@@ -36,7 +37,7 @@ export default function AppProjectPage({ project }: AppProjectPageProps) {
         </div>
       </section>
 
-      <div className="my-14 h-0.5 w-full bg-black"></div>
+      <Separator />
 
       <section className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-20 lg:flex-row">
         <div className="flex-1 space-y-6">
@@ -84,7 +85,7 @@ export default function AppProjectPage({ project }: AppProjectPageProps) {
         </motion.div>
       </section>
 
-      <div className="my-14 h-0.5 w-full bg-black"></div>
+      <Separator />
 
       <section className="mx-auto max-w-6xl px-6 py-20">
         <motion.h2
@@ -116,41 +117,43 @@ export default function AppProjectPage({ project }: AppProjectPageProps) {
         </div>
       </section>
 
-      <div className="my-14 h-0.5 w-full bg-black"></div>
+      <Separator />
 
-      <motion.h2
-        className="mb-6 text-center text-4xl font-bold"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        Low-Fidelity Prototyping
-      </motion.h2>
-      <p className="mx-auto mb-12 max-w-3xl text-lg">
-        {project.lowFidelityPrototyping.description}
-      </p>
+      <section className="mx-auto max-w-6xl px-6 py-20 text-center">
+        <motion.h2
+          className="mb-6 text-center text-4xl font-bold"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          Low-Fidelity Prototyping
+        </motion.h2>
+        <p className="mx-auto mb-12 max-w-3xl text-lg">
+          {project.lowFidelityPrototyping.description}
+        </p>
 
-      <motion.div
-        className="flex flex-col items-center justify-center gap-8 sm:flex-row sm:items-start"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        {project.lowFidelityPrototyping.images.map((image, idx) => {
-          return (
-            <Image
-              key={idx}
-              src={image.src}
-              width={image.width ?? 350}
-              height={image.height ?? 550}
-              alt={`Wireframe ${idx + 1}`}
-              className={`rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105 ${image.className}`}
-            />
-          );
-        })}
-      </motion.div>
+        <motion.div
+          className="flex flex-col items-center justify-center gap-8 sm:flex-row sm:items-start"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          {project.lowFidelityPrototyping.images.map((image, idx) => {
+            return (
+              <Image
+                key={idx}
+                src={image.src}
+                width={image.width ?? 350}
+                height={image.height ?? 550}
+                alt={`Wireframe ${idx + 1}`}
+                className={`rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105 ${image.className}`}
+              />
+            );
+          })}
+        </motion.div>
+      </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20 text-center">
         <motion.h2
@@ -173,7 +176,7 @@ export default function AppProjectPage({ project }: AppProjectPageProps) {
         </div>
       </section>
 
-      <div className="my-14 h-0.5 w-full bg-black"></div>
+      <Separator />
 
       <section className="mx-auto max-w-6xl px-6 py-20 text-center">
         <h2 className="mb-6 text-4xl font-bold">Next Steps</h2>
