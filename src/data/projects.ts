@@ -13,10 +13,14 @@ export const projects: Project[] = [
     },
     topics: ["Business project", "Multifunctional elastic", "A fashion item"],
     showcase: {
-      src: "/images/projects/elastup/elastup-group-2.svg",
-      alt: "Elastup Showcase",
-      width: 2000,
-      height: 800,
+      medias: [
+        {
+          src: "/images/projects/elastup/elastup-group-2.svg",
+          alt: "Elastup Showcase",
+          width: 2000,
+          height: 800,
+        },
+      ],
     },
     steps: [
       {
@@ -70,10 +74,7 @@ export const projects: Project[] = [
       title: "Campaign Video",
       media: {
         src: "/videos/projects/elastup/elastup.mp4",
-      },
-      placeholder: {
-        src: "/images/projects/elastup/play-video.svg",
-        alt: "Video Preview",
+        placeholder: "/images/projects/elastup/play-video.svg",
         width: 800,
         height: 450,
       },
@@ -285,5 +286,246 @@ export const projects: Project[] = [
       "Further user testing to refine AI recommendations and to improve the user flow of the app",
     slug: "ai-fashion",
     layout: "app-project",
+  },
+  {
+    title: "TeruBot",
+    subtitle: "A multifunctional elastic band turned fashionable",
+    description:
+      "TeruBot is a robot-app system that visualizes the emotional atmosphere of shared spaces. It turns collective feelings into a tangible robotic presence. Inspired by Teru Teru Bōzu, it reinterprets “good weather” as emotional well-being. Through simple animations, it displays group emotions in real time. It fosters emotional awareness and connection.",
+    slug: "teru-bot",
+    layout: "business-project",
+    background: {
+      src: "/images/projects/teru-bot/teru-bot-1.jpg",
+    },
+    topics: [
+      "Collective emotion in shared spaces",
+      "Community awareness & connection",
+      "Social robotics / robot companion",
+    ],
+    showcase: {
+      medias: [
+        {
+          src: "/images/projects/teru-bot/garden.svg",
+          alt: "Garden",
+          width: 66,
+          height: 135,
+        },
+        {
+          src: "/images/projects/teru-bot/teru-bot-3.png",
+          alt: "TeruBot",
+          width: 456,
+          height: 513,
+        },
+        {
+          src: "/images/projects/teru-bot/stormy.svg",
+          alt: "Stormy",
+          width: 66,
+          height: 135,
+        },
+        {
+          src: "/images/projects/teru-bot/teru-bot-1.jpg",
+          alt: "TeruBot Companion App",
+          width: 2048,
+          height: 1536,
+        },
+        {
+          src: "/images/projects/teru-bot/checkup.svg",
+          alt: "Checkup",
+          width: 66,
+          height: 135,
+        },
+        {
+          src: "/images/projects/teru-bot/teru-bot-4.png",
+          alt: "TeruBot Tilt",
+          width: 1038,
+          height: 1352,
+        },
+      ],
+      mediaLayout: "grid",
+    },
+    steps: [
+      {
+        title: "How does it work ?",
+        medias: [
+          {
+            src: "/images/projects/teru-bot/working-process.jpg",
+            alt: "Working Process",
+            width: 1600,
+            height: 1131,
+          },
+        ],
+        mediaLayout: "full-width",
+        substeps: [
+          {
+            title: "1. Hardware",
+            descriptions: [
+              "Terubot is powered by a Raspberry Pi running a local language model (Qwen 2.5 - 1.5B) to process voice input and detect emotional cues. A compact webcam and microphone enable presence detection and speech interaction. In parallel, the Gemini API is being explored to improve emotion recognition and speech-to-text capabilities.",
+              "The system uses three ESP32 microcontrollers: two control dynamic eye displays with real-time animated expressions, while a third manages head movements via a PWM driver for smooth, synchronized motion.",
+              "This distributed architecture allows Terubot to translate detected emotions into physical behaviors, combining eye animations and subtle movements. The robot's head was developed through multiple 3D printing iterations to achieve a balance between mechanical reliability and expressive design.",
+            ],
+            medias: [
+              {
+                src: "/images/projects/teru-bot/teru-head.jpg",
+                alt: "TeruBot Head",
+                width: 1824,
+                height: 2736,
+              },
+              {
+                src: "/images/projects/teru-bot/teru-neck.png",
+                alt: "TeruBot Neck",
+                width: 1824,
+                height: 2736,
+              },
+              {
+                src: "/images/projects/teru-bot/teru-body.png",
+                alt: "TeruBot Body",
+                width: 1824,
+                height: 2736,
+              },
+            ],
+            mediaLayout: "grid",
+          },
+          {
+            title: "2. App",
+            descriptions: [
+              "The mobile app is the main interaction point, combining emotional check-ins with the visualization of both personal and collective moods. Unlike traditional mood-tracking tools focused on individual reflection, Terubot introduces a shared dimension through the concept of “emotional weather,” encouraging users to engage with how a community feels.",
+              "The app is structured around four core features: a collective mood visualization, a quick daily check-in, a community channel, and a user profile. Emotions are translated into weather states (sunny, cloudy, stormy), making them intuitive, playful, and non-clinical.",
+              "To keep interactions lightweight, the check-in is based on four key dimensions—mood, energy, stress, and social connection—allowing users to quickly express their state without writing. A shared, anonymous community channel complements this by fostering positive interactions and a sense of belonging without social pressure.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "First iteration",
+        medias: [
+          {
+            src: "/images/projects/teru-bot/app-v1.png",
+            alt: "App V1",
+            width: 626,
+            height: 626,
+            caption:
+              "Figure 1 shows the first set of app wireframes developed during this iteration.",
+          },
+        ],
+        mediaLayout: "full-width",
+      },
+      {
+        title: "Second iteration",
+        substeps: [
+          {
+            title: "Visual Design Iteration",
+            descriptions: [
+              "In the second iteration, we redesigned the app's visual identity to better reflect its emotional purpose. The interface became more expressive and dynamic, with backgrounds adapting in real time to the user's emotional state using warm or cool tones to mirror mood through ambient feedback.",
+              "We also introduced simple data visualizations, allowing users to track their emotional trends over the past week, along with supportive, non-judgmental messages.",
+              "Finally, an onboarding screen was added to clearly introduce the concept of emotional weather and guide new users through the app's core features.",
+            ],
+            medias: [
+              {
+                src: "/images/projects/teru-bot/app-v2.png",
+                alt: "App V2",
+                width: 908,
+                height: 276,
+                caption:
+                  "Figure 2 presents the second iteration mockups, highlighting the updated visual language",
+              },
+            ],
+            mediaLayout: "full-width",
+          },
+          {
+            title: "User Study & Evaluation",
+            descriptions: [
+              "A user study (N = 8) evaluated the mobile app and robot through Likert-scale questions, observations, and open feedback. Overall, participants reported a positive experience, highlighting the app's clarity, ease of use, and strong comfort with the emotional check-in process. Most expressed willingness to use it regularly, though deeper emotional reflection could be further developed.",
+              "The robot was perceived as intuitive and engaging, with participants especially valuing its contribution to the overall experience. While interpretations of its expressions varied slightly, its physical presence significantly enhanced the system.",
+              "Observations revealed that users naturally attempted to touch the robot, suggesting a strong expectation of tactile interaction. This highlights the importance of embodiment in emotional systems.",
+              "Future iterations will build on this by adding touch interactions and extending the emotional weather metaphor through physical elements like adaptive clothing, reinforcing Terubot as a tangible and expressive emotional companion.",
+            ],
+            medias: [
+              {
+                src: "/images/projects/teru-bot/welcome.png",
+                alt: "App Welcome page",
+                width: 1206,
+                height: 2622,
+              },
+              {
+                src: "/images/projects/teru-bot/onboarding-home.png",
+                alt: "App Onboarding Home page",
+                width: 1206,
+                height: 2622,
+              },
+              {
+                src: "/images/projects/teru-bot/onboarding-goal.png",
+                alt: "App Onboarding Goal page",
+                width: 1206,
+                height: 2622,
+              },
+              {
+                src: "/images/projects/teru-bot/onboarding-weather.png",
+                alt: "App Onboarding Weather page",
+                width: 1206,
+                height: 2622,
+              },
+              {
+                src: "/images/projects/teru-bot/teru-bot-5.jpg",
+                alt: "TeruBot Closeup",
+                width: 2048,
+                height: 2731,
+              },
+              {
+                src: "/images/projects/teru-bot/onboarding-connect.png",
+                alt: "App Onboarding Connect page",
+                width: 1206,
+                height: 2622,
+              },
+              {
+                src: "/images/projects/teru-bot/garden-rainy.png",
+                alt: "Rainy Garden",
+                width: 1206,
+                height: 2622,
+              },
+              {
+                src: "/images/projects/teru-bot/garden-sunny.png",
+                alt: "Sunny Garden",
+                width: 1206,
+                height: 2622,
+              },
+              {
+                src: "/images/projects/teru-bot/garden-stormy.png",
+                alt: "Stormy Garden",
+                width: 1206,
+                height: 2622,
+              },
+              {
+                src: "/images/projects/teru-bot/features.jpg",
+                alt: "Features",
+                width: 2048,
+                height: 817,
+                fullWidth: true,
+              },
+              // {
+              //   src: "/videos/projects/teru-bot/teru-bot.mov",
+              //   alt: "TeruBot Video",
+              // },
+              {
+                src: "/images/projects/teru-bot/teru-bot-custom.jpg",
+                alt: "TeruBot with glasses",
+                width: 2048,
+                height: 2731,
+              },
+            ],
+            mediaLayout: "grid",
+          },
+        ],
+      },
+    ],
+    assets: {
+      title: "Files (source code, 3D models, hardware schematics)",
+      description:
+        "You can find all the files and 3D models on our GitHub: [Teru Corp](https://github.com/Teru-Corp)",
+      // media: {
+      //   src: "/videos/projects/teru-bot/app.mp4",
+      //   width: 460,
+      //   height: 1000,
+      // },
+    },
   },
 ];

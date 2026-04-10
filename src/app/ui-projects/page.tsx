@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+
+import Media from "@/components/Media";
 
 /* ========================= UI IMAGES ========================= */
 const uiImages = [
@@ -61,7 +62,7 @@ export default function UIShowcasePage() {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="overflow-hidden rounded-3xl shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl"
             >
-              <Image
+              <Media
                 src={item.src}
                 alt={item.label}
                 width={500}

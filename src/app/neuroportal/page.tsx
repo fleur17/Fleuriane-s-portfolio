@@ -1,10 +1,11 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
+
+import Media from "@/components/Media";
 
 const particlesCount = 500;
 const positions = new Float32Array(particlesCount * 3);
@@ -152,14 +153,14 @@ export default function NeuroportalPage() {
           and also as a canva to the artwork.
         </p>
         <div className="flex flex-col gap-10 md:flex-row">
-          <Image
+          <Media
             src="/images/projects/neuroportal/first-proto-neuro.svg"
             alt="Door 2"
             width={500}
             height={500}
             className="w-full max-w-[500px]"
           />
-          <Image
+          <Media
             src="/images/projects/neuroportal/second-proto-neuro.svg"
             alt="Door 2"
             width={500}
@@ -202,7 +203,7 @@ export default function NeuroportalPage() {
           piece. However, there have been some challenges with fitting the size
           of the projection to match the door perfectly.
         </p>
-        <Image
+        <Media
           src="/images/projects/neuroportal/third-step.svg"
           alt="First step"
           width={700}
@@ -214,13 +215,13 @@ export default function NeuroportalPage() {
       {/* Photos Section */}
       <section className="mx-auto max-w-[1300px] px-6 py-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-          <Image
+          <Media
             src="/images/projects/neuroportal/photo-1.svg"
             width={700}
             height={700}
             alt="photo 1"
           />
-          <Image
+          <Media
             src="/images/projects/neuroportal/photo-2.svg"
             width={700}
             height={700}
@@ -236,7 +237,7 @@ export default function NeuroportalPage() {
         <h2 className="mb-10 text-3xl font-bold">Photos of the project</h2>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div className="aspect-square w-full overflow-hidden rounded-lg shadow-md">
-            <Image
+            <Media
               src="/images/projects/neuroportal/portal-1.svg"
               alt="step 1"
               width={400}
@@ -246,7 +247,7 @@ export default function NeuroportalPage() {
           </div>
 
           <div className="aspect-square w-full overflow-hidden rounded-lg shadow-md">
-            <Image
+            <Media
               src="/images/projects/neuroportal/portal-2.svg"
               alt="step 2"
               width={400}
@@ -256,7 +257,7 @@ export default function NeuroportalPage() {
           </div>
 
           <div className="aspect-square w-full overflow-hidden rounded-lg shadow-md">
-            <Image
+            <Media
               src="/images/projects/neuroportal/portal-3.svg"
               alt="step 3"
               width={400}
@@ -266,7 +267,7 @@ export default function NeuroportalPage() {
           </div>
 
           <div className="aspect-square w-full overflow-hidden rounded-lg shadow-md">
-            <Image
+            <Media
               src="/images/projects/neuroportal/festival-learning.jpg"
               alt="step 2"
               width={400}
@@ -275,7 +276,7 @@ export default function NeuroportalPage() {
             />
           </div>
           <div className="aspect-square w-full overflow-hidden rounded-lg shadow-md">
-            <Image
+            <Media
               src="/images/projects/neuroportal/neuro-door.jpg"
               alt="step 2"
               width={400}
@@ -284,7 +285,7 @@ export default function NeuroportalPage() {
             />
           </div>
           <div className="aspect-square w-full overflow-hidden rounded-lg shadow-md">
-            <Image
+            <Media
               src="/images/projects/neuroportal/neuro-purple.jpg"
               alt="step 2"
               width={400}

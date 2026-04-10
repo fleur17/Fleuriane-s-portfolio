@@ -4,9 +4,12 @@ export type MediaType = {
   height?: number;
   alt?: string;
   className?: string;
+  caption?: string;
+  fullWidth?: boolean;
+  placeholder?: string;
 };
 
-export interface ProjectDisplayData {
+export type ProjectDisplayData = {
   textSection: {
     projectType: string;
     name: string;
@@ -16,7 +19,7 @@ export interface ProjectDisplayData {
     position: "left" | "right";
   };
   mediaSection: MediaType[];
-}
+};
 
 export type NavLink = {
   href: string;
@@ -42,49 +45,51 @@ export type Layout = {
 
 export type MediaLayout = "full-width" | "grid";
 
+export type Medias = {
+  medias?: MediaType[];
+  mediaLayout?: MediaLayout;
+};
+
 export type Steps = {
   title: string;
   descriptions?: string[];
-  medias?: MediaType[];
-  mediaLayout?: MediaLayout;
-  substeps?: Steps;
-};
+  substeps?: Steps[];
+} & Medias;
 
-export type AppProject = ProjectBoilerplate &
-  Layout & {
-    layout: "app-project";
-    carousel: MediaType[];
-    researchInsights: {
-      research: string;
-      insights: string[];
-      media: MediaType;
-    };
-    userPersonas: {
-      description: string;
-      personas: {
-        name: string;
-        age: number;
-        goals: string;
-        painPoints: string;
-        media: MediaType;
-      }[];
-    };
-    lowFidelityPrototyping: Prototyping;
-    highFidelityPrototyping: Prototyping;
-    nextSteps: string;
+export type AppProject = {
+  layout: "app-project";
+  carousel: MediaType[];
+  researchInsights: {
+    research: string;
+    insights: string[];
+    media: MediaType;
   };
+  userPersonas: {
+    description: string;
+    personas: {
+      name: string;
+      age: number;
+      goals: string;
+      painPoints: string;
+      media: MediaType;
+    }[];
+  };
+  lowFidelityPrototyping: Prototyping;
+  highFidelityPrototyping: Prototyping;
+  nextSteps: string;
+} & ProjectBoilerplate &
+  Layout;
 
-export type BusinessProject = ProjectBoilerplate &
-  Layout & {
-    layout: "business-project";
-    background: MediaType;
-    topics: string[];
-    showcase: MediaType;
-    steps: Steps[];
-    assets: {
-      title: string;
-      description?: string;
-      media: MediaType;
-      placeholder?: MediaType;
-    };
+export type BusinessProject = {
+  layout: "business-project";
+  background: MediaType;
+  topics: string[];
+  showcase: Medias;
+  steps: Steps[];
+  assets: {
+    title: string;
+    description?: string;
+    media?: MediaType;
   };
+} & ProjectBoilerplate &
+  Layout;

@@ -1,10 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useState } from "react";
 
+import Media from "@/components/Media";
+import MediaDisplay from "@/components/MediaDisplay";
+import RichText from "@/components/RichText";
 import Separator from "@/components/Separator";
+import Step from "@/components/Step";
 import { BusinessProject } from "@/types";
 
 interface BusinessProjectProps {
@@ -58,13 +61,7 @@ export default function BusinessProjectPage({ project }: BusinessProjectProps) {
         </div>
 
         <div className="mt-10 flex w-full justify-center md:col-span-2">
-          <Image
-            src={project.showcase.src}
-            alt={project.showcase.alt ?? ""}
-            width={project.showcase.width}
-            height={project.showcase.height}
-            className={`h-auto w-500 max-w-full ${project.showcase.className}`}
-          />
+          <MediaDisplay medias={project.showcase} />
         </div>
       </section>
 
@@ -72,44 +69,7 @@ export default function BusinessProjectPage({ project }: BusinessProjectProps) {
 
       {project.steps.map((step, idx) => (
         <Fragment key={idx}>
-          <section className="mx-auto max-w-5xl space-y-10 px-6 py-30">
-            <h2 className="mb-6 text-5xl font-bold">{step.title}</h2>
-
-            {step.descriptions?.map((description, idx) => (
-              <p key={idx} className="text-lg leading-relaxed">
-                {description}
-              </p>
-            ))}
-
-            {step.medias &&
-              (step.mediaLayout === "grid" ? (
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-10">
-                  {step.medias.map((media) => (
-                    <Image
-                      key={media.alt}
-                      src={media.src}
-                      alt={media.alt ?? ""}
-                      width={media.width}
-                      height={media.height}
-                      className={`h-auto w-full max-w-full rounded-lg ${media.className ?? ""}`}
-                    />
-                  ))}
-                </div>
-              ) : (
-                <div className="flex w-full flex-col items-center gap-10">
-                  {step.medias.map((media) => (
-                    <Image
-                      key={media.alt}
-                      src={media.src}
-                      alt={media.alt ?? ""}
-                      width={media.width}
-                      height={media.height}
-                      className={`h-auto w-full max-w-full ${media.className ?? ""}`}
-                    />
-                  ))}
-                </div>
-              ))}
-          </section>
+          <Step step={step} />
           <Separator />
         </Fragment>
       ))}
@@ -117,27 +77,32 @@ export default function BusinessProjectPage({ project }: BusinessProjectProps) {
       <section className="mx-auto max-w-4xl px-6 py-30 text-center">
         <h2 className="mb-10 text-5xl font-bold">{project.assets.title}</h2>
 
-        {isPlaying || !project.assets.placeholder ? (
+        {isPlaying || !project.assets.media?.placeholder ? (
           <video
-            src={project.assets.media.src}
+            src={project.assets.media?.src}
             controls
             autoPlay={isPlaying}
-            className="mx-auto h-auto w-200 max-w-full rounded-lg"
+            className="mx-auto h-auto min-h-0 w-200 max-w-full rounded-lg"
           />
         ) : (
           <div
             className="inline-block cursor-pointer rounded-lg px-6 py-3 font-bold text-white transition-opacity hover:opacity-80"
             onClick={() => setIsPlaying(true)}
           >
-            <Image
-              src={project.assets.placeholder?.src}
-              alt={project.assets.placeholder?.alt ?? ""}
-              width={project.assets.placeholder?.width}
-              height={project.assets.placeholder?.height}
-              className={`h-auto w-200 max-w-full ${project.assets.placeholder?.className}`}
+            <Media
+              src={project.assets.media.placeholder}
+              alt={project.assets.media.alt ?? ""}
+              width={project.assets.media.width}
+              height={project.assets.media.height}
+              className={`h-auto w-200 max-w-full ${project.assets.media.className}`}
             />
           </div>
         )}
+
+        <RichText
+          content={project.assets.description ?? ""}
+          className="mt-6 text-lg leading-relaxed md:mt-10"
+        />
       </section>
 
       <div className="flex w-full justify-center pb-20">

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Media from "@/components/Media";
 
 export default function AboutMePage() {
   return (
@@ -12,7 +12,7 @@ export default function AboutMePage() {
 
         <div className="relative mx-auto mt-10 grid max-w-7xl gap-20 px-8 md:grid-cols-2">
           <div className="flex justify-center md:justify-start">
-            <Image
+            <Media
               src="/images/about/photo-gallery.svg"
               alt="Portrait or creative image"
               width={900}

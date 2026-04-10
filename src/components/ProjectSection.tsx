@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 
+import Media from "@/components/Media";
 import { ProjectDisplayData } from "@/types";
 
 interface ProjectSectionProps {
@@ -36,7 +36,7 @@ export default function ProjectSection({ project }: ProjectSectionProps) {
           Read More
         </Link>
 
-        <Image
+        <Media
           src={project.textSection.media.src}
           width={project.textSection.media.width}
           height={project.textSection.media.height}
@@ -51,7 +51,7 @@ export default function ProjectSection({ project }: ProjectSectionProps) {
         <div className="bg-beige w-full max-w-162.5 overflow-hidden rounded-lg shadow-md">
           {project.mediaSection.map((media) => {
             return (
-              <Image
+              <Media
                 src={media.src}
                 alt={media.alt ?? ""}
                 width={media.width}
