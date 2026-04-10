@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import { ImageType } from "@/types";
+import { MediaType } from "@/types";
 
 interface PrototypeCardProps {
-  image: ImageType;
+  image: MediaType;
 }
 
 export default function PrototypeCard({ image }: PrototypeCardProps) {

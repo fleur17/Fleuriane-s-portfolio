@@ -7,7 +7,7 @@ export const projectsShowcases: ProjectShowcaseData[] = [
       name: "The NeuroPortals",
       description: "What if you can be the master of your brain through art ?",
       href: "/neuroportal",
-      image: {
+      media: {
         src: "/images/common/touchdesigner.svg",
         width: 150,
         height: 50,
@@ -15,7 +15,7 @@ export const projectsShowcases: ProjectShowcaseData[] = [
       },
       position: "left",
     },
-    imageSection: [
+    mediaSection: [
       {
         src: "/images/projects/neuroportal/neuro.svg",
         alt: "Neuro background",
@@ -38,7 +38,7 @@ export const projectsShowcases: ProjectShowcaseData[] = [
       name: "The Elastup",
       description: "For your notebook, Tupperware and more ...",
       href: "/elastup",
-      image: {
+      media: {
         src: "/images/common/kickstarter-logo.svg",
         width: 200,
         height: 100,
@@ -46,7 +46,7 @@ export const projectsShowcases: ProjectShowcaseData[] = [
       },
       position: "right",
     },
-    imageSection: [
+    mediaSection: [
       {
         src: "/images/projects/elastup/elastup-group.svg",
         alt: "Elastup",
@@ -61,7 +61,7 @@ export const projectsShowcases: ProjectShowcaseData[] = [
       name: "NewFaces",
       description: "The App that will teach you all about fashion!",
       href: "/newfaces",
-      image: {
+      media: {
         src: "/images/common/figma-logo.svg",
         width: 150,
         height: 50,
@@ -69,7 +69,7 @@ export const projectsShowcases: ProjectShowcaseData[] = [
       },
       position: "left",
     },
-    imageSection: [
+    mediaSection: [
       {
         src: "/images/projects/newfaces/newfaces.png",
         alt: "New Faces background",
@@ -84,7 +84,7 @@ export const projectsShowcases: ProjectShowcaseData[] = [
       name: "AI Fashion",
       description: "Designing an AI-powered fashion ecosystem",
       href: "/ai-fashion",
-      image: {
+      media: {
         src: "/images/common/figma-logo.svg",
         width: 150,
         height: 50,
@@ -92,7 +92,7 @@ export const projectsShowcases: ProjectShowcaseData[] = [
       },
       position: "right",
     },
-    imageSection: [
+    mediaSection: [
       {
         src: "/images/projects/ai-fashion/ai-fashion.svg",
         alt: "AI Fashion",

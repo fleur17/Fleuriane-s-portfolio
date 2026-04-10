@@ -37,10 +37,10 @@ export default function ProjectSection({ project }: ProjectSectionProps) {
         </Link>
 
         <Image
-          src={project.textSection.image.src}
-          width={project.textSection.image.width}
-          height={project.textSection.image.height}
-          alt={project.textSection.image.alt ?? ""}
+          src={project.textSection.media.src}
+          width={project.textSection.media.width}
+          height={project.textSection.media.height}
+          alt={project.textSection.media.alt ?? ""}
           className="mt-4 h-auto w-auto"
         />
       </div>
@@ -49,15 +49,15 @@ export default function ProjectSection({ project }: ProjectSectionProps) {
         className={`group flex w-full flex-1 justify-center ${project.textSection.position === "left" ? "lg:order-2" : "lg:order-1"}`}
       >
         <div className="bg-beige w-full max-w-162.5 overflow-hidden rounded-lg shadow-md">
-          {project.imageSection.map((image) => {
+          {project.mediaSection.map((media) => {
             return (
               <Image
-                src={image.src}
-                alt={image.alt ?? ""}
-                width={image.width}
-                height={image.height}
-                className={`${image.className} h-auto w-full object-cover`}
-                key={image.src}
+                src={media.src}
+                alt={media.alt ?? ""}
+                width={media.width}
+                height={media.height}
+                className={`${media.className} h-auto w-full object-cover`}
+                key={media.src}
               />
             );
           })}
