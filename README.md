@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fleuriane Lam — Portfolio
+
+Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS. Deployed on Vercel.
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) >= 18
+- [pnpm](https://pnpm.io/) (recommended), [npm](https://www.npmjs.com/), or [yarn](https://yarnpkg.com/)
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/fleur17/Fleuriane-s-portfolio.git
+cd Fleuriane-s-portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# pnpm (recommended)
+pnpm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# npm
+npm install
 
-## Learn More
+# yarn
+yarn install
+```
 
-To learn more about Next.js, take a look at the following resources:
+> Husky pre-commit hooks are set up automatically via the `prepare` script.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Run the development server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# pnpm
+pnpm dev
 
-## Deploy on Vercel
+# npm
+npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# yarn
+yarn dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Available Scripts
+
+| Script | pnpm | npm | yarn |
+|---|---|---|---|
+| Start dev server | `pnpm dev` | `npm run dev` | `yarn dev` |
+| Build for production | `pnpm build` | `npm run build` | `yarn build` |
+| Start production server | `pnpm start` | `npm run start` | `yarn start` |
+| Run ESLint | `pnpm lint` | `npm run lint` | `yarn lint` |
+| Run ESLint with auto-fix | `pnpm lint:fix` | `npm run lint:fix` | `yarn lint:fix` |
+| Format with Prettier | `pnpm format` | `npm run format` | `yarn format` |
+| Check formatting | `pnpm format:check` | `npm run format:check` | `yarn format:check` |
+| Lint + format check | `pnpm check` | `npm run check` | `yarn check` |
+
+## Project Structure
+
+```
+src/
+  app/              # Next.js app router pages
+  components/       # Reusable React components
+  data/             # Static data files (projects, etc.)
+  types/            # Shared TypeScript types
+  assets/           # Local assets imported in code
+public/
+  images/
+    common/         # Shared assets (logo, icons, tool logos)
+    about/          # Images used on the about page
+    projects/       # Per-project images
+      neuroportal/
+      elastup/
+      ...
+```
+
+## Adding a New Project
+
+1. Add the project entry to `src/data/projects.ts`
+2. Add project images to `public/images/projects/<project-slug>/`
+3. Create the project detail page at `src/app/<project-slug>/page.tsx`
+
+## CI
+
+GitHub Actions runs on every push and pull request to `main`:
+
+- ESLint
+- Prettier format check
+- Next.js build
+
+## Deployment
+
+The project is deployed on [Vercel](https://vercel.com/). Every push to `main` triggers a production deployment automatically.
