@@ -101,4 +101,28 @@ export const projectsDisplays: ProjectDisplayData[] = [
       },
     ],
   },
+  {
+    textSection: {
+      projectType: "BUSINESS PROJECT",
+      name: "TeruBot",
+      description:
+        "Materializing collective emotions through an embodied robotic metaphor",
+      href: "/teru-bot",
+      image: {
+        src: "/images/common/figma-logo.svg",
+        width: 150,
+        height: 50,
+        alt: "Figma",
+      },
+      position: "left",
+    },
+    imageSection: [
+      {
+        src: "/images/projects/teru-bot/teru-bot-1.jpg",
+        alt: "TeruBot",
+        width: 800,
+        height: 800,
+      },
+    ],
+  },
 ];
