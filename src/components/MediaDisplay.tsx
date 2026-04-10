@@ -22,6 +22,7 @@ export default function MediaDisplay({ medias }: MediaDisplayProps) {
                   width={media.width}
                   height={media.height}
                   className={`h-auto w-full max-w-full rounded-lg ${media.className ?? ""}`}
+                  caption={media.caption}
                 />
               </div>
             ))}
@@ -36,6 +37,7 @@ export default function MediaDisplay({ medias }: MediaDisplayProps) {
                 width={media.width}
                 height={media.height}
                 className={`h-auto w-full max-w-full ${media.className ?? ""}`}
+                caption={media.caption}
               />
             ))}
           </div>

@@ -76,12 +76,12 @@ export default function BusinessProjectPage({ project }: BusinessProjectProps) {
       <section className="mx-auto max-w-4xl px-6 py-30 text-center">
         <h2 className="mb-10 text-5xl font-bold">{project.assets.title}</h2>
 
-        {isPlaying || !project.assets.placeholder ? (
+        {isPlaying || !project.assets.media?.placeholder ? (
           <video
-            src={project.assets.media.src}
+            src={project.assets.media?.src}
             controls
             autoPlay={isPlaying}
-            className="mx-auto h-auto w-200 max-w-full rounded-lg"
+            className="mx-auto h-auto min-h-0 w-200 max-w-full rounded-lg"
           />
         ) : (
           <div
@@ -89,14 +89,18 @@ export default function BusinessProjectPage({ project }: BusinessProjectProps) {
             onClick={() => setIsPlaying(true)}
           >
             <Media
-              src={project.assets.placeholder?.src}
-              alt={project.assets.placeholder?.alt ?? ""}
-              width={project.assets.placeholder?.width}
-              height={project.assets.placeholder?.height}
-              className={`h-auto w-200 max-w-full ${project.assets.placeholder?.className}`}
+              src={project.assets.media.placeholder}
+              alt={project.assets.media.alt ?? ""}
+              width={project.assets.media.width}
+              height={project.assets.media.height}
+              className={`h-auto w-200 max-w-full ${project.assets.media.className}`}
             />
           </div>
         )}
+
+        <p className="mt-6 text-lg leading-relaxed md:mt-10">
+          {project.assets.description}
+        </p>
       </section>
 
       <div className="flex w-full justify-center pb-20">

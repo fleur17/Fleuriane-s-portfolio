@@ -74,10 +74,7 @@ export const projects: Project[] = [
       title: "Campaign Video",
       media: {
         src: "/videos/projects/elastup/elastup.mp4",
-      },
-      placeholder: {
-        src: "/images/projects/elastup/play-video.svg",
-        alt: "Video Preview",
+        placeholder: "/images/projects/elastup/play-video.svg",
         width: 800,
         height: 450,
       },
@@ -504,10 +501,10 @@ export const projects: Project[] = [
                 height: 817,
                 fullWidth: true,
               },
-              {
-                src: "/videos/projects/teru-bot/teru-bot.mov",
-                alt: "TeruBot Video",
-              },
+              // {
+              //   src: "/videos/projects/teru-bot/teru-bot.mov",
+              //   alt: "TeruBot Video",
+              // },
               {
                 src: "/images/projects/teru-bot/teru-bot-custom.jpg",
                 alt: "TeruBot with glasses",
@@ -524,9 +521,11 @@ export const projects: Project[] = [
       title: "Files (source code, 3D models, hardware schematics)",
       description:
         "You can find all the files and 3D models on our GitHub: Teru Corp",
-      media: {
-        src: "/videos/projects/teru-bot/app.mp4",
-      },
+      // media: {
+      //   src: "/videos/projects/teru-bot/app.mp4",
+      //   width: 460,
+      //   height: 1000,
+      // },
     },
   },
 ];

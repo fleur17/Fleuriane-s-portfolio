@@ -9,27 +9,29 @@ export default function Media({
   height,
   alt,
   className,
+  caption,
 }: MediaType) {
-  if (isVideo(src)) {
-    return (
-      <video
-        src={src}
-        width={width}
-        height={height}
-        className={className}
-        controls
-        playsInline
-      />
-    );
-  }
-
   return (
-    <Image
-      src={src}
-      width={width}
-      height={height}
-      alt={alt ?? ""}
-      className={className}
-    />
+    <>
+      {isVideo(src) ? (
+        <video
+          src={src}
+          width={width}
+          height={height}
+          className={`min-h-0 ${className}`}
+          controls
+          playsInline
+        />
+      ) : (
+        <Image
+          src={src}
+          width={width}
+          height={height}
+          alt={alt ?? ""}
+          className={className}
+        />
+      )}
+      <p className="text-sm leading-relaxed text-gray-600 italic">{caption}</p>
+    </>
   );
 }
