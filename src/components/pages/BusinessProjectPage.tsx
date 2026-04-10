@@ -5,6 +5,7 @@ import { Fragment, useState } from "react";
 
 import Media from "@/components/Media";
 import MediaDisplay from "@/components/MediaDisplay";
+import RichText from "@/components/RichText";
 import Separator from "@/components/Separator";
 import Step from "@/components/Step";
 import { BusinessProject } from "@/types";
@@ -98,9 +99,10 @@ export default function BusinessProjectPage({ project }: BusinessProjectProps) {
           </div>
         )}
 
-        <p className="mt-6 text-lg leading-relaxed md:mt-10">
-          {project.assets.description}
-        </p>
+        <RichText
+          content={project.assets.description ?? ""}
+          className="mt-6 text-lg leading-relaxed md:mt-10"
+        />
       </section>
 
       <div className="flex w-full justify-center pb-20">

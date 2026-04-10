@@ -520,7 +520,7 @@ export const projects: Project[] = [
     assets: {
       title: "Files (source code, 3D models, hardware schematics)",
       description:
-        "You can find all the files and 3D models on our GitHub: Teru Corp",
+        "You can find all the files and 3D models on our GitHub: [Teru Corp](https://github.com/Teru-Corp)",
       // media: {
       //   src: "/videos/projects/teru-bot/app.mp4",
       //   width: 460,
