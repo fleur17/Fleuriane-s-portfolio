@@ -1,6 +1,84 @@
-import { AppProject } from "@/types";
+import { Project } from "@/types";
 
-export const projects: AppProject[] = [
+export const projects: Project[] = [
+  {
+    title: "Elastup",
+    subtitle: "A multifunctional elastic band turned fashionable",
+    description:
+      "The Elastup is a versatile and stylish accessory designed to tackle everyday challenges. Combining a durable elastic band with croûte de veau leather, this innovative product features horizontal slots that securely hold pens, cutlery, and other small essentials.",
+    slug: "elastup",
+    layout: "business-project",
+    background: {
+      src: "/images/projects/elastup/background.svg",
+    },
+    topics: ["Business project", "Multifunctional elastic", "A fashion item"],
+    showcase: {
+      src: "/images/projects/elastup/elastup-group-2.svg",
+      alt: "Elastup Showcase",
+      width: 2000,
+      height: 800,
+    },
+    steps: [
+      {
+        title: "Design Process",
+        descriptions: [
+          "After several long brainstorming sessions without success, our idea finally came when a team member arrived with a tupperware held together by an elastic band — a simple workaround that inspired the project.",
+          "We came up with the idea of a stylish cutlery holder for tupperware, using a wider elastic band for better stability and a leather finish for elegance. Soon, the concept expanded to notebooks, iPads, and more — that is how Elastup was born.",
+        ],
+        medias: [
+          {
+            src: "/images/projects/elastup/design-process.svg",
+            alt: "Prototype 1",
+            width: 2000,
+            height: 800,
+          },
+          {
+            src: "/images/projects/elastup/prototypes.svg",
+            alt: "Prototype 2",
+            width: 2000,
+            height: 800,
+          },
+        ],
+        mediaLayout: "full-width",
+      },
+      {
+        title: "Posters of our campaign",
+        medias: [
+          {
+            src: "/images/projects/elastup/blue-elastup.svg",
+            alt: "Poster 1",
+            width: 400,
+            height: 600,
+          },
+          {
+            src: "/images/projects/elastup/grey-elastup.svg",
+            alt: "Poster 2",
+            width: 400,
+            height: 600,
+          },
+          {
+            src: "/images/projects/elastup/green-elastup.svg",
+            alt: "Poster 3",
+            width: 400,
+            height: 600,
+          },
+        ],
+        mediaLayout: "grid",
+      },
+    ],
+    assets: {
+      title: "Campaign Video",
+      media: {
+        src: "/videos/projects/elastup/elastup.mp4",
+      },
+      placeholder: {
+        src: "/images/projects/elastup/play-video.svg",
+        alt: "Video Preview",
+        width: 800,
+        height: 450,
+      },
+    },
+  },
   {
     title: "NewFaces — Your Fashion Learning Platform",
     description:
@@ -27,7 +105,7 @@ export const projects: AppProject[] = [
         "Mobile navigation is often cumbersome in existing platforms.",
         "Agencies need clear indicators of talent availability and experience.",
       ],
-      image: {
+      media: {
         src: "/images/common/desk.jpg",
         width: 200,
         height: 200,
@@ -43,7 +121,7 @@ export const projects: AppProject[] = [
           age: 24,
           goals: "Find opportunities and showcase portfolio easily",
           painPoints: "Navigation confusion, poor image layout",
-          image: {
+          media: {
             src: "/images/common/woman.png",
           },
         },
@@ -52,7 +130,7 @@ export const projects: AppProject[] = [
           age: 28,
           goals: "Get noticed by agencies quickly",
           painPoints: "Unclear profile visibility and metrics",
-          image: {
+          media: {
             src: "/images/common/man.png",
           },
         },
@@ -61,7 +139,7 @@ export const projects: AppProject[] = [
           age: 35,
           goals: "Efficiently discover and manage talent",
           painPoints: "Difficult filtering and slow loading profiles",
-          image: {
+          media: {
             src: "/images/common/woman.png",
           },
         },
@@ -70,7 +148,7 @@ export const projects: AppProject[] = [
     lowFidelityPrototyping: {
       description:
         "To quickly iterate on design concepts, I developed low-fidelity wireframes focusing on layout, navigation, and core functionalities.",
-      images: [
+      medias: [
         {
           src: "/images/projects/newfaces/proto-1.svg",
           alt: "Wireframe 1",
@@ -84,7 +162,7 @@ export const projects: AppProject[] = [
     highFidelityPrototyping: {
       description:
         "Interactive prototypes were created to validate flows and test usability before development.",
-      images: [
+      medias: [
         {
           src: "/images/projects/newfaces/home-page-2.svg",
           alt: "Landing Page",
@@ -131,7 +209,7 @@ export const projects: AppProject[] = [
         "Fashion professionals struggle to keep their schedules updated.",
         "Retailers need smarter ways to showcase products with AI.",
       ],
-      image: {
+      media: {
         src: "/images/common/desk.jpg",
         width: 200,
         height: 200,
@@ -147,7 +225,7 @@ export const projects: AppProject[] = [
           age: 22,
           goals: "Discover new outfits instantly using AI",
           painPoints: "Hard to match clothes with her style",
-          image: {
+          media: {
             src: "/images/common/woman.png",
           },
         },
@@ -156,7 +234,7 @@ export const projects: AppProject[] = [
           age: 30,
           goals: "Being more informed about the fashion world",
           painPoints: "Not enough time to stay properly informed",
-          image: {
+          media: {
             src: "/images/common/man.png",
           },
         },
@@ -166,7 +244,7 @@ export const projects: AppProject[] = [
           goals:
             "Improve product visibility and boost customer engagement with AI styling",
           painPoints: "Low visibility, low engagement, and high returns",
-          image: {
+          media: {
             src: "/images/common/woman.png",
           },
         },
@@ -174,7 +252,7 @@ export const projects: AppProject[] = [
     },
     lowFidelityPrototyping: {
       description: "Sketches and wireframes mapping out AI-driven user flows",
-      images: [
+      medias: [
         {
           src: "/images/projects/ai-fashion/home_proto.svg",
           alt: "Wireframe 1",
@@ -188,7 +266,7 @@ export const projects: AppProject[] = [
     highFidelityPrototyping: {
       description:
         "Prototypes showcasing AI features and the different pages of the app",
-      images: [
+      medias: [
         {
           src: "/images/projects/ai-fashion/home.svg",
           alt: "Home page",
