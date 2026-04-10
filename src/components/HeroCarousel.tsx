@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import { ImageType } from "@/types";
+import { MediaType } from "@/types";
 
 interface HeroCarouselProps {
-  carousel: ImageType[];
+  carousel: MediaType[];
 }
 
 export default function HeroCarousel({ carousel }: HeroCarouselProps) {

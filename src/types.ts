@@ -1,4 +1,4 @@
-export type ImageType = {
+export type MediaType = {
   src: string;
   width?: number;
   height?: number;
@@ -6,16 +6,16 @@ export type ImageType = {
   className?: string;
 };
 
-export interface ProjectShowcaseData {
+export interface ProjectDisplayData {
   textSection: {
     projectType: string;
     name: string;
     description: string;
     href: string;
-    image: ImageType;
+    media: MediaType;
     position: "left" | "right";
   };
-  imageSection: ImageType[];
+  mediaSection: MediaType[];
 }
 
 export type NavLink = {
@@ -25,36 +25,66 @@ export type NavLink = {
 
 export type Prototyping = {
   description: string;
-  images: ImageType[];
+  medias: MediaType[];
 };
 
-export type LayoutKey = "app-project";
+export type Project = AppProject | BusinessProject;
+
+export type ProjectBoilerplate = {
+  title: string;
+  subtitle?: string;
+  description: string;
+};
 
 export type Layout = {
   slug: string;
-  layout: LayoutKey;
 };
 
-export interface AppProject extends Layout {
+export type MediaLayout = "full-width" | "grid";
+
+export type Steps = {
   title: string;
-  description: string;
-  carousel: ImageType[];
-  researchInsights: {
-    research: string;
-    insights: string[];
-    image: ImageType;
+  descriptions?: string[];
+  medias?: MediaType[];
+  mediaLayout?: MediaLayout;
+  substeps?: Steps;
+};
+
+export type AppProject = ProjectBoilerplate &
+  Layout & {
+    layout: "app-project";
+    carousel: MediaType[];
+    researchInsights: {
+      research: string;
+      insights: string[];
+      media: MediaType;
+    };
+    userPersonas: {
+      description: string;
+      personas: {
+        name: string;
+        age: number;
+        goals: string;
+        painPoints: string;
+        media: MediaType;
+      }[];
+    };
+    lowFidelityPrototyping: Prototyping;
+    highFidelityPrototyping: Prototyping;
+    nextSteps: string;
   };
-  userPersonas: {
-    description: string;
-    personas: {
-      name: string;
-      age: number;
-      goals: string;
-      painPoints: string;
-      image: ImageType;
-    }[];
+
+export type BusinessProject = ProjectBoilerplate &
+  Layout & {
+    layout: "business-project";
+    background: MediaType;
+    topics: string[];
+    showcase: MediaType;
+    steps: Steps[];
+    assets: {
+      title: string;
+      description?: string;
+      media: MediaType;
+      placeholder?: MediaType;
+    };
   };
-  lowFidelityPrototyping: Prototyping;
-  highFidelityPrototyping: Prototyping;
-  nextSteps: string;
-}

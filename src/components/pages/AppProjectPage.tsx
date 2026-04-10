@@ -75,11 +75,11 @@ export default function AppProjectPage({ project }: AppProjectPageProps) {
         >
           <div className="w-full max-w-150 overflow-hidden rounded-3xl bg-white shadow-lg transition-transform duration-500 hover:scale-105">
             <Image
-              src={project.researchInsights.image.src}
-              alt={project.researchInsights.image.alt ?? ""}
-              width={project.researchInsights.image.width ?? 200}
-              height={project.researchInsights.image.height ?? 200}
-              className={`h-auto w-full object-cover ${project.researchInsights.image.className}`}
+              src={project.researchInsights.media.src}
+              alt={project.researchInsights.media.alt ?? ""}
+              width={project.researchInsights.media.width ?? 200}
+              height={project.researchInsights.media.height ?? 200}
+              className={`h-auto w-full object-cover ${project.researchInsights.media.className}`}
             />
           </div>
         </motion.div>
@@ -110,7 +110,7 @@ export default function AppProjectPage({ project }: AppProjectPageProps) {
                 age={persona.age}
                 goals={persona.goals}
                 painPoints={persona.painPoints}
-                img={persona.image.src}
+                img={persona.media.src}
               />
             );
           })}
@@ -140,7 +140,7 @@ export default function AppProjectPage({ project }: AppProjectPageProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          {project.lowFidelityPrototyping.images.map((image, idx) => {
+          {project.lowFidelityPrototyping.medias.map((image, idx) => {
             return (
               <Image
                 key={idx}
@@ -170,7 +170,7 @@ export default function AppProjectPage({ project }: AppProjectPageProps) {
         </p>
 
         <div className="flex flex-wrap justify-center gap-10">
-          {project.highFidelityPrototyping.images.map((image, idx) => {
+          {project.highFidelityPrototyping.medias.map((image, idx) => {
             return <PrototypeCard key={idx} image={image} />;
           })}
         </div>

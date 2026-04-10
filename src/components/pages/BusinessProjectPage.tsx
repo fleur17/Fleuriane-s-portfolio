@@ -1,0 +1,153 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { Fragment, useState } from "react";
+
+import Separator from "@/components/Separator";
+import { BusinessProject } from "@/types";
+
+interface BusinessProjectProps {
+  project: BusinessProject;
+}
+
+export default function BusinessProjectPage({ project }: BusinessProjectProps) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  return (
+    <main className="w-full bg-white font-serif text-black">
+      <section
+        className="w-full bg-cover bg-center bg-no-repeat py-32 text-center md:py-40"
+        style={{
+          backgroundImage: `url('${project.background.src}')`,
+        }}
+      >
+        <h1 className="font-serif text-6xl font-bold drop-shadow-lg">
+          {project.title}
+        </h1>
+        <p className="mt-4 font-serif text-xl font-light drop-shadow-lg">
+          {project.subtitle}
+        </p>
+      </section>
+
+      <div className="my-0 h-0.5 w-full bg-black"></div>
+
+      <section className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-10 px-6 md:grid-cols-2 md:py-20 lg:py-30">
+        <div className="flex flex-col justify-start md:ml-15">
+          <h2 className="mb-6 text-5xl font-bold">
+            Description of the product
+          </h2>
+          <p className="mt-6 text-lg leading-relaxed md:mt-10">
+            {project.description}
+          </p>
+        </div>
+
+        <div className="mt-10 flex flex-col justify-start md:mt-0 md:ml-50">
+          <h2 className="mb-20 text-5xl font-bold">Topics</h2>
+          <ul className="list-none space-y-4 text-lg">
+            {project.topics.map((topic, idx) => (
+              <li key={topic}>
+                <span
+                  className={`inline-block w-1/2 border-b pb-1 ${idx < project.topics.length - 1 ? "border-black" : "border-transparent"}`}
+                >
+                  {topic}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-10 flex w-full justify-center md:col-span-2">
+          <Image
+            src={project.showcase.src}
+            alt={project.showcase.alt ?? ""}
+            width={project.showcase.width}
+            height={project.showcase.height}
+            className={`h-auto w-500 max-w-full ${project.showcase.className}`}
+          />
+        </div>
+      </section>
+
+      <Separator />
+
+      {project.steps.map((step, idx) => (
+        <Fragment key={idx}>
+          <section className="mx-auto max-w-5xl space-y-10 px-6 py-30">
+            <h2 className="mb-6 text-5xl font-bold">{step.title}</h2>
+
+            {step.descriptions?.map((description, idx) => (
+              <p key={idx} className="text-lg leading-relaxed">
+                {description}
+              </p>
+            ))}
+
+            {step.medias &&
+              (step.mediaLayout === "grid" ? (
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-10">
+                  {step.medias.map((media) => (
+                    <Image
+                      key={media.alt}
+                      src={media.src}
+                      alt={media.alt ?? ""}
+                      width={media.width}
+                      height={media.height}
+                      className={`h-auto w-full max-w-full rounded-lg ${media.className ?? ""}`}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="flex w-full flex-col items-center gap-10">
+                  {step.medias.map((media) => (
+                    <Image
+                      key={media.alt}
+                      src={media.src}
+                      alt={media.alt ?? ""}
+                      width={media.width}
+                      height={media.height}
+                      className={`h-auto w-full max-w-full ${media.className ?? ""}`}
+                    />
+                  ))}
+                </div>
+              ))}
+          </section>
+          <Separator />
+        </Fragment>
+      ))}
+
+      <section className="mx-auto max-w-4xl px-6 py-30 text-center">
+        <h2 className="mb-10 text-5xl font-bold">{project.assets.title}</h2>
+
+        {isPlaying || !project.assets.placeholder ? (
+          <video
+            src={project.assets.media.src}
+            controls
+            autoPlay={isPlaying}
+            className="mx-auto h-auto w-200 max-w-full rounded-lg"
+          />
+        ) : (
+          <div
+            className="inline-block cursor-pointer rounded-lg px-6 py-3 font-bold text-white transition-opacity hover:opacity-80"
+            onClick={() => setIsPlaying(true)}
+          >
+            <Image
+              src={project.assets.placeholder?.src}
+              alt={project.assets.placeholder?.alt ?? ""}
+              width={project.assets.placeholder?.width}
+              height={project.assets.placeholder?.height}
+              className={`h-auto w-200 max-w-full ${project.assets.placeholder?.className}`}
+            />
+          </div>
+        )}
+      </section>
+
+      <div className="flex w-full justify-center pb-20">
+        <Link
+          href="/"
+          className="bg-black px-6 py-3 font-bold text-white transition-opacity hover:opacity-80"
+        >
+          Back to Home
+        </Link>
+      </div>
+    </main>
+  );
+}
