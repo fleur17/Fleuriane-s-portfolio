@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -44,11 +41,6 @@ export default function ContactPage() {
 
   return (
     <div className="relative min-h-screen bg-white">
-      {/* --- STICKY HEADER --- */}
-      <div className="bg-opacity-90 fixed top-0 left-0 z-50 w-full bg-white backdrop-blur-sm">
-        <Header />
-      </div>
-
       {/* PAGE CONTENT */}
       <div className="mx-auto max-w-2xl px-6 pt-40 pb-52">
         {/* TITLE */}
@@ -135,9 +127,6 @@ export default function ContactPage() {
           </a>
         </p>
       </div>
-
-      {/* --- NORMAL FOOTER --- */}
-      <Footer />
     </div>
   );
 }

@@ -4,16 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-
 export default function ElastupPage() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <main className="w-full bg-white font-serif text-black">
-      <Header />
-
       {/* ================= HERO ================= */}
       <section
         className="w-full bg-cover bg-center bg-no-repeat py-32 text-center md:py-40"
@@ -187,8 +182,6 @@ export default function ElastupPage() {
           Back to Home
         </Link>
       </div>
-
-      <Footer />
     </main>
   );
 }

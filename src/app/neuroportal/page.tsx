@@ -6,9 +6,6 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-
 const particlesCount = 500;
 const positions = new Float32Array(particlesCount * 3);
 for (let i = 0; i < particlesCount * 3; i++) {
@@ -64,8 +61,6 @@ export default function NeuroportalPage() {
 
   return (
     <main className="w-full bg-white font-serif text-black">
-      <Header />
-
       {/* Hero Section */}
       <section
         className="w-full bg-cover bg-center bg-no-repeat py-40 text-center"
@@ -311,8 +306,6 @@ export default function NeuroportalPage() {
           Back to Home
         </Link>
       </div>
-
-      <Footer />
     </main>
   );
 }
