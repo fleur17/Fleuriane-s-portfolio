@@ -1,10 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useState } from "react";
 
+import Media from "@/components/Media";
+import MediaDisplay from "@/components/MediaDisplay";
 import Separator from "@/components/Separator";
+import Step from "@/components/Step";
 import { BusinessProject } from "@/types";
 
 interface BusinessProjectProps {
@@ -58,13 +60,7 @@ export default function BusinessProjectPage({ project }: BusinessProjectProps) {
         </div>
 
         <div className="mt-10 flex w-full justify-center md:col-span-2">
-          <Image
-            src={project.showcase.src}
-            alt={project.showcase.alt ?? ""}
-            width={project.showcase.width}
-            height={project.showcase.height}
-            className={`h-auto w-500 max-w-full ${project.showcase.className}`}
-          />
+          <MediaDisplay medias={project.showcase} />
         </div>
       </section>
 
@@ -72,44 +68,7 @@ export default function BusinessProjectPage({ project }: BusinessProjectProps) {
 
       {project.steps.map((step, idx) => (
         <Fragment key={idx}>
-          <section className="mx-auto max-w-5xl space-y-10 px-6 py-30">
-            <h2 className="mb-6 text-5xl font-bold">{step.title}</h2>
-
-            {step.descriptions?.map((description, idx) => (
-              <p key={idx} className="text-lg leading-relaxed">
-                {description}
-              </p>
-            ))}
-
-            {step.medias &&
-              (step.mediaLayout === "grid" ? (
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-10">
-                  {step.medias.map((media) => (
-                    <Image
-                      key={media.alt}
-                      src={media.src}
-                      alt={media.alt ?? ""}
-                      width={media.width}
-                      height={media.height}
-                      className={`h-auto w-full max-w-full rounded-lg ${media.className ?? ""}`}
-                    />
-                  ))}
-                </div>
-              ) : (
-                <div className="flex w-full flex-col items-center gap-10">
-                  {step.medias.map((media) => (
-                    <Image
-                      key={media.alt}
-                      src={media.src}
-                      alt={media.alt ?? ""}
-                      width={media.width}
-                      height={media.height}
-                      className={`h-auto w-full max-w-full ${media.className ?? ""}`}
-                    />
-                  ))}
-                </div>
-              ))}
-          </section>
+          <Step step={step} />
           <Separator />
         </Fragment>
       ))}
@@ -129,7 +88,7 @@ export default function BusinessProjectPage({ project }: BusinessProjectProps) {
             className="inline-block cursor-pointer rounded-lg px-6 py-3 font-bold text-white transition-opacity hover:opacity-80"
             onClick={() => setIsPlaying(true)}
           >
-            <Image
+            <Media
               src={project.assets.placeholder?.src}
               alt={project.assets.placeholder?.alt ?? ""}
               width={project.assets.placeholder?.width}
