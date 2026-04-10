@@ -3,7 +3,7 @@
 import { notFound } from "next/navigation";
 import { use } from "react";
 
-import AppProjectPage from "@/components/AppProjectPage";
+import AppProjectPage from "@/components/pages/AppProjectPage";
 import { projects } from "@/data/projects";
 import { LayoutKey } from "@/types";
 

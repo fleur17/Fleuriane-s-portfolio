@@ -5,7 +5,7 @@ import { Fragment } from "react/jsx-runtime";
 import HomePageHero from "@/components/HomePageHero";
 import ProjectSection from "@/components/ProjectSection";
 import Separator from "@/components/Separator";
-import { projectsShowcases } from "@/data/projects";
+import { projectsShowcases } from "@/data/projects-showcases";
 
 export default function HomePage() {
   return (
