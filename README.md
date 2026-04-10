@@ -56,16 +56,16 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Available Scripts
 
-| Script | pnpm | npm | yarn |
-|---|---|---|---|
-| Start dev server | `pnpm dev` | `npm run dev` | `yarn dev` |
-| Build for production | `pnpm build` | `npm run build` | `yarn build` |
-| Start production server | `pnpm start` | `npm run start` | `yarn start` |
-| Run ESLint | `pnpm lint` | `npm run lint` | `yarn lint` |
-| Run ESLint with auto-fix | `pnpm lint:fix` | `npm run lint:fix` | `yarn lint:fix` |
-| Format with Prettier | `pnpm format` | `npm run format` | `yarn format` |
-| Check formatting | `pnpm format:check` | `npm run format:check` | `yarn format:check` |
-| Lint + format check | `pnpm check` | `npm run check` | `yarn check` |
+| Script                   | pnpm                | npm                    | yarn                |
+| ------------------------ | ------------------- | ---------------------- | ------------------- |
+| Start dev server         | `pnpm dev`          | `npm run dev`          | `yarn dev`          |
+| Build for production     | `pnpm build`        | `npm run build`        | `yarn build`        |
+| Start production server  | `pnpm start`        | `npm run start`        | `yarn start`        |
+| Run ESLint               | `pnpm lint`         | `npm run lint`         | `yarn lint`         |
+| Run ESLint with auto-fix | `pnpm lint:fix`     | `npm run lint:fix`     | `yarn lint:fix`     |
+| Format with Prettier     | `pnpm format`       | `npm run format`       | `yarn format`       |
+| Check formatting         | `pnpm format:check` | `npm run format:check` | `yarn format:check` |
+| Lint + format check      | `pnpm check`        | `npm run check`        | `yarn check`        |
 
 ## Project Structure
 
