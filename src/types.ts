@@ -6,6 +6,7 @@ export type MediaType = {
   className?: string;
   caption?: string;
   fullWidth?: boolean;
+  placeholder?: string;
 };
 
 export type ProjectDisplayData = {
@@ -88,8 +89,7 @@ export type BusinessProject = {
   assets: {
     title: string;
     description?: string;
-    media: MediaType;
-    placeholder?: MediaType;
+    media?: MediaType;
   };
 } & ProjectBoilerplate &
   Layout;
