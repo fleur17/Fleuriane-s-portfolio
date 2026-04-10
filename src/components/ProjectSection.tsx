@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { ProjectData } from "@/types";
+import { ProjectShowcaseData } from "@/types";
 
 interface ProjectSectionProps {
-  project: ProjectData;
+  project: ProjectShowcaseData;
 }
 
 export default function ProjectSection({ project }: ProjectSectionProps) {
@@ -40,7 +40,7 @@ export default function ProjectSection({ project }: ProjectSectionProps) {
           src={project.textSection.image.src}
           width={project.textSection.image.width}
           height={project.textSection.image.height}
-          alt={project.textSection.image.alt}
+          alt={project.textSection.image.alt ?? ""}
           className="mt-4 h-auto w-auto"
         />
       </div>
@@ -53,7 +53,7 @@ export default function ProjectSection({ project }: ProjectSectionProps) {
             return (
               <Image
                 src={image.src}
-                alt={image.alt}
+                alt={image.alt ?? ""}
                 width={image.width}
                 height={image.height}
                 className={`${image.className} h-auto w-full object-cover`}
