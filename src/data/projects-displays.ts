@@ -1,6 +1,6 @@
-import { ProjectShowcaseData } from "@/types";
+import { ProjectDisplayData } from "@/types";
 
-export const projectsShowcases: ProjectShowcaseData[] = [
+export const projectsDisplays: ProjectDisplayData[] = [
   {
     textSection: {
       projectType: "ART PROJECT",

@@ -6,7 +6,7 @@ export type MediaType = {
   className?: string;
 };
 
-export interface ProjectShowcaseData {
+export interface ProjectDisplayData {
   textSection: {
     projectType: string;
     name: string;

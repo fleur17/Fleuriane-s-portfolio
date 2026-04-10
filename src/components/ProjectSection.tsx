@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { ProjectShowcaseData } from "@/types";
+import { ProjectDisplayData } from "@/types";
 
 interface ProjectSectionProps {
-  project: ProjectShowcaseData;
+  project: ProjectDisplayData;
 }
 
 export default function ProjectSection({ project }: ProjectSectionProps) {
