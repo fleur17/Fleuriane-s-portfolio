@@ -295,7 +295,7 @@ export const projects: Project[] = [
     slug: "teru-bot",
     layout: "business-project",
     background: {
-      src: "/images/projects/teru-bot/teru-bot-1.jpg",
+      src: "/images/projects/teru-bot/terubot-card-1.svg",
     },
     topics: [
       "Collective emotion in shared spaces",
