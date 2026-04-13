@@ -125,4 +125,28 @@ export const projectsDisplays: ProjectDisplayData[] = [
       },
     ],
   },
+  {
+    textSection: {
+      projectType: "UX/UI PROJECT",
+      name: "Secret Valentines",
+      description:
+        "A modern, digital love letter delivery system for Valentine's Day.",
+      href: "/secret-valentines",
+      media: {
+        src: "/images/common/figma-logo.svg",
+        width: 150,
+        height: 50,
+        alt: "Figma",
+      },
+      position: "right",
+    },
+    mediaSection: [
+      {
+        src: "/images/projects/secret-valentines/secret-valentines.jpg",
+        alt: "Secret Valentines",
+        width: 1414,
+        height: 2000,
+      },
+    ],
+  },
 ];
