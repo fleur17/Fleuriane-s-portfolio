@@ -58,13 +58,14 @@ export type Steps = {
 
 export type AppProject = {
   layout: "app-project";
-  carousel: MediaType[];
-  researchInsights: {
+  carousel?: MediaType[];
+  researchInsights?: {
+    title?: string;
     research: string;
     insights: string[];
     media: MediaType;
   };
-  userPersonas: {
+  userPersonas?: {
     description: string;
     personas: {
       name: string;
@@ -74,8 +75,8 @@ export type AppProject = {
       media: MediaType;
     }[];
   };
-  lowFidelityPrototyping: Prototyping;
-  highFidelityPrototyping: Prototyping;
+  lowFidelityPrototyping?: Prototyping;
+  highFidelityPrototyping?: Prototyping;
   nextSteps: string;
 } & ProjectBoilerplate &
   Layout;
