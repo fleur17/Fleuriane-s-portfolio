@@ -33,150 +33,166 @@ export default function AppProjectPage({ project }: AppProjectPageProps) {
           >
             {project.description}
           </motion.p>
-          <HeroCarousel carousel={project.carousel} />
+          {project.carousel && <HeroCarousel carousel={project.carousel} />}
         </div>
       </section>
 
       <Separator />
 
-      <section className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-20 lg:flex-row">
-        <div className="flex-1 space-y-6">
-          <motion.h2
-            className="mb-6 text-4xl font-bold"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            User Research & Insights
-          </motion.h2>
-          <motion.p
-            className="max-w-md text-lg leading-relaxed"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-          >
-            {project.researchInsights.research}
-          </motion.p>
-          <ul className="list-inside list-disc space-y-3 text-lg text-black">
-            {project.researchInsights.insights.map((insight, idx) => {
-              return <li key={idx}>{insight}</li>;
-            })}
-          </ul>
-        </div>
+      {project.researchInsights && (
+        <>
+          <section className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-20 lg:flex-row">
+            <div className="flex-1 space-y-6">
+              <motion.h2
+                className="mb-6 text-4xl font-bold"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                {project.researchInsights.title ?? "User Research & Insights"}
+              </motion.h2>
+              <motion.p
+                className="max-w-md text-lg leading-relaxed"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+              >
+                {project.researchInsights.research}
+              </motion.p>
+              <ul className="list-inside list-disc space-y-3 text-lg text-black">
+                {project.researchInsights.insights.map((insight, idx) => {
+                  return <li key={idx}>{insight}</li>;
+                })}
+              </ul>
+            </div>
 
-        <motion.div
-          className="flex flex-1 justify-center"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="w-full max-w-150 overflow-hidden rounded-3xl bg-white shadow-lg transition-transform duration-500 hover:scale-105">
-            <Media
-              src={project.researchInsights.media.src}
-              alt={project.researchInsights.media.alt ?? ""}
-              width={project.researchInsights.media.width ?? 200}
-              height={project.researchInsights.media.height ?? 200}
-              className={`h-auto w-full object-cover ${project.researchInsights.media.className}`}
-            />
-          </div>
-        </motion.div>
-      </section>
+            <motion.div
+              className="flex flex-1 justify-center"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="w-full max-w-150 overflow-hidden rounded-3xl bg-white shadow-lg transition-transform duration-500 hover:scale-105">
+                <Media
+                  src={project.researchInsights.media.src}
+                  alt={project.researchInsights.media.alt ?? ""}
+                  width={project.researchInsights.media.width ?? 200}
+                  height={project.researchInsights.media.height ?? 200}
+                  className={`h-auto w-full object-cover ${project.researchInsights.media.className}`}
+                />
+              </div>
+            </motion.div>
+          </section>
 
-      <Separator />
+          <Separator />
+        </>
+      )}
 
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <motion.h2
-          className="mb-6 text-center text-4xl font-bold"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          User Personas
-        </motion.h2>
-        <p className="mx-auto mb-12 max-w-3xl text-center text-lg">
-          {project.userPersonas.description}
-        </p>
+      {project.userPersonas && (
+        <>
+          <section className="mx-auto max-w-6xl px-6 py-20">
+            <motion.h2
+              className="mb-6 text-center text-4xl font-bold"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              User Personas
+            </motion.h2>
+            <p className="mx-auto mb-12 max-w-3xl text-center text-lg">
+              {project.userPersonas.description}
+            </p>
 
-        <div className="grid gap-10 md:grid-cols-3">
-          {project.userPersonas.personas.map((persona) => {
-            return (
-              <PersonaCard
-                key={persona.name}
-                name={persona.name}
-                age={persona.age}
-                goals={persona.goals}
-                painPoints={persona.painPoints}
-                img={persona.media.src}
-              />
-            );
-          })}
-        </div>
-      </section>
+            <div className="grid gap-10 md:grid-cols-3">
+              {project.userPersonas.personas.map((persona) => {
+                return (
+                  <PersonaCard
+                    key={persona.name}
+                    name={persona.name}
+                    age={persona.age}
+                    goals={persona.goals}
+                    painPoints={persona.painPoints}
+                    img={persona.media.src}
+                  />
+                );
+              })}
+            </div>
+          </section>
 
-      <Separator />
+          <Separator />
+        </>
+      )}
 
-      <section className="mx-auto max-w-6xl px-6 py-20 text-center">
-        <motion.h2
-          className="mb-6 text-center text-4xl font-bold"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          Low-Fidelity Prototyping
-        </motion.h2>
-        <p className="mx-auto mb-12 max-w-3xl text-lg">
-          {project.lowFidelityPrototyping.description}
-        </p>
+      {project.lowFidelityPrototyping && (
+        <>
+          <section className="mx-auto max-w-6xl px-6 py-20 text-center">
+            <motion.h2
+              className="mb-6 text-center text-4xl font-bold"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              Low-Fidelity Prototyping
+            </motion.h2>
+            <p className="mx-auto mb-12 max-w-3xl text-lg">
+              {project.lowFidelityPrototyping.description}
+            </p>
 
-        <motion.div
-          className="flex flex-col items-center justify-center gap-8 sm:flex-row sm:items-start"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          {project.lowFidelityPrototyping.medias.map((image, idx) => {
-            return (
-              <Media
-                key={idx}
-                src={image.src}
-                width={image.width ?? 350}
-                height={image.height ?? 550}
-                alt={`Wireframe ${idx + 1}`}
-                className={`rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105 ${image.className}`}
-              />
-            );
-          })}
-        </motion.div>
-      </section>
+            <motion.div
+              className="flex flex-col items-center justify-center gap-8 sm:flex-row sm:items-start"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              {project.lowFidelityPrototyping.medias.map((image, idx) => {
+                return (
+                  <Media
+                    key={idx}
+                    src={image.src}
+                    width={image.width ?? 350}
+                    height={image.height ?? 550}
+                    alt={`Wireframe ${idx + 1}`}
+                    className={`rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105 ${image.className}`}
+                  />
+                );
+              })}
+            </motion.div>
+          </section>
+        </>
+      )}
 
-      <section className="mx-auto max-w-6xl px-6 py-20 text-center">
-        <motion.h2
-          className="mb-6 text-4xl font-bold"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          High-Fidelity Prototyping
-        </motion.h2>
-        <p className="mx-auto mb-12 max-w-3xl text-lg">
-          {project.highFidelityPrototyping.description}
-        </p>
+      {project.highFidelityPrototyping && (
+        <>
+          <section className="mx-auto max-w-6xl px-6 py-20 text-center">
+            <motion.h2
+              className="mb-6 text-4xl font-bold"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              High-Fidelity Prototyping
+            </motion.h2>
+            <p className="mx-auto mb-12 max-w-3xl text-lg">
+              {project.highFidelityPrototyping.description}
+            </p>
 
-        <div className="flex flex-wrap justify-center gap-10">
-          {project.highFidelityPrototyping.medias.map((image, idx) => {
-            return <PrototypeCard key={idx} image={image} />;
-          })}
-        </div>
-      </section>
+            <div className="flex flex-wrap justify-center gap-10">
+              {project.highFidelityPrototyping.medias.map((image, idx) => {
+                return <PrototypeCard key={idx} image={image} />;
+              })}
+            </div>
+          </section>
 
-      <Separator />
+          <Separator />
+        </>
+      )}
 
       <section className="mx-auto max-w-6xl px-6 py-20 text-center">
         <h2 className="mb-6 text-4xl font-bold">Next Steps</h2>
