@@ -305,43 +305,13 @@ export const projects: Project[] = [
     showcase: {
       medias: [
         {
-          src: "/images/projects/teru-bot/garden.svg",
-          alt: "Garden",
-          width: 66,
-          height: 135,
-        },
-        {
-          src: "/images/projects/teru-bot/teru-bot-3.png",
-          alt: "TeruBot",
-          width: 456,
-          height: 513,
-        },
-        {
-          src: "/images/projects/teru-bot/stormy.svg",
-          alt: "Stormy",
-          width: 66,
-          height: 135,
-        },
-        {
-          src: "/images/projects/teru-bot/teru-bot-1.jpg",
-          alt: "TeruBot Companion App",
-          width: 2048,
-          height: 1536,
-        },
-        {
-          src: "/images/projects/teru-bot/checkup.svg",
-          alt: "Checkup",
-          width: 66,
-          height: 135,
-        },
-        {
-          src: "/images/projects/teru-bot/teru-bot-4.png",
-          alt: "TeruBot Tilt",
-          width: 1038,
-          height: 1352,
+          src: "/images/projects/teru-bot/group.png",
+          alt: "Group",
+          width: 1440,
+          height: 1874,
         },
       ],
-      mediaLayout: "grid",
+      mediaLayout: "full-width",
     },
     steps: [
       {

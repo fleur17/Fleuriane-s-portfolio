@@ -31,7 +31,11 @@ export default function Media({
           className={className}
         />
       )}
-      <p className="text-sm leading-relaxed text-gray-600 italic">{caption}</p>
+      {caption && (
+        <p className="text-sm leading-relaxed text-gray-600 italic">
+          {caption}
+        </p>
+      )}
     </>
   );
 }
