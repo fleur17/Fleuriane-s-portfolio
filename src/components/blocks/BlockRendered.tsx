@@ -9,26 +9,41 @@ import TopicBlock from "@/components/blocks/TopicBlock";
 import VideoBlock from "@/components/blocks/VideoBlock";
 import { Block } from "@/types";
 
-export default function BlockRenderer({ block }: { block: Block }) {
+export interface BlockRendereBoilerplate {
+  className?: string;
+  depth?: number;
+}
+
+interface BlockRendererProps extends BlockRendereBoilerplate {
+  block: Block;
+}
+
+export default function BlockRenderer({
+  block,
+  className,
+  depth,
+}: BlockRendererProps) {
   switch (block.type) {
     case "topic":
-      return <TopicBlock block={block} />;
+      return <TopicBlock block={block} className={className} depth={depth} />;
     case "title":
-      return <TitleBlock block={block} />;
+      return <TitleBlock block={block} className={className} depth={depth} />;
     case "text":
-      return <TextBlock block={block} />;
+      return <TextBlock block={block} className={className} depth={depth} />;
     case "media":
-      return <MediaBlock block={block} />;
+      return <MediaBlock block={block} className={className} depth={depth} />;
     case "video":
-      return <VideoBlock block={block} />;
+      return <VideoBlock block={block} className={className} depth={depth} />;
     case "document":
-      return <DocumentBlock block={block} />;
+      return (
+        <DocumentBlock block={block} className={className} depth={depth} />
+      );
     case "mix":
-      return <MixBlock block={block} />;
+      return <MixBlock block={block} className={className} depth={depth} />;
     case "column":
-      return <ColumnBlock block={block} />;
+      return <ColumnBlock block={block} className={className} depth={depth} />;
     case "card":
-      return <CardBlock block={block} />;
+      return <CardBlock block={block} className={className} depth={depth} />;
     default:
       return null;
   }
