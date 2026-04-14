@@ -3,8 +3,8 @@
 import { notFound } from "next/navigation";
 import { use } from "react";
 
-import AppProjectPage from "@/components/pages/AppProjectPage";
-import BusinessProjectPage from "@/components/pages/BusinessProjectPage";
+import BlockRenderer from "@/components/blocks/BlockRendered";
+import Separator from "@/components/Separator";
 import { projects } from "@/data/projects";
 
 export default function ProjectPage({
@@ -19,12 +19,23 @@ export default function ProjectPage({
     notFound();
   }
 
-  switch (project.layout) {
-    case "app-project":
-      return <AppProjectPage project={project} />;
-    case "business-project":
-      return <BusinessProjectPage project={project} />;
-    default:
-      notFound();
-  }
+  return (
+    <>
+      {project.steps.map((step, idx) => {
+        return (
+          <>
+            <section
+              className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-20"
+              key={`step-${idx}`}
+            >
+              {step.blocks.map((block, idx) => (
+                <BlockRenderer key={idx} block={block} />
+              ))}
+            </section>
+            {idx < project.steps.length - 1 && <Separator />}
+          </>
+        );
+      })}
+    </>
+  );
 }
