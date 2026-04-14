@@ -5,7 +5,6 @@ export type MediaType = {
   alt?: string;
   className?: string;
   caption?: string;
-  fullWidth?: boolean;
   placeholder?: string;
 };
 
@@ -13,5 +12,5 @@ export type MediaLayout = "full-width" | "grid";
 
 export type Medias = {
   medias?: MediaType[];
-  mediaLayout?: MediaLayout;
+  mediasLayout?: MediaLayout;
 };

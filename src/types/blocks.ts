@@ -16,6 +16,7 @@ export type CarouselBlock = {
 
 export type TopicBlock = {
   type: "topic";
+  title: string;
   text: string;
   topics: string[];
 };
@@ -40,13 +41,16 @@ export type VideoBlock = {
   type: "video";
   media: MediaType;
 };
+
 export type DocumentBlock = {
   type: "document";
   src: string;
+  alt?: string;
 };
 
 export type MixBlock = {
   type: "mix";
+  title: string;
   text: string;
   media: MediaType;
   position: Position;
@@ -59,6 +63,7 @@ export type ColumnBlock = {
 
 export type CardBlock = {
   type: "card";
+  title: string;
   text: string;
   cards: Card[];
 };
