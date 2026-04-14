@@ -1,7 +1,7 @@
 "use client";
 
 import { notFound } from "next/navigation";
-import { use } from "react";
+import { Fragment, use } from "react";
 
 import BlockRenderer from "@/components/blocks/BlockRendered";
 import Separator from "@/components/Separator";
@@ -23,17 +23,14 @@ export default function ProjectPage({
     <>
       {project.steps.map((step, idx) => {
         return (
-          <>
-            <section
-              className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-20"
-              key={`step-${idx}`}
-            >
+          <Fragment key={`frag-${idx}`}>
+            <section className="mx-auto flex max-w-6xl flex-col px-6 py-20">
               {step.blocks.map((block, idx) => (
                 <BlockRenderer key={idx} block={block} />
               ))}
             </section>
             {idx < project.steps.length - 1 && <Separator />}
-          </>
+          </Fragment>
         );
       })}
     </>
