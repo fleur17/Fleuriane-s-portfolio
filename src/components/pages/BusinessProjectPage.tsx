@@ -9,6 +9,7 @@ import RichText from "@/components/RichText";
 import Separator from "@/components/Separator";
 import Step from "@/components/Step";
 import { BusinessProject } from "@/types";
+import { isVideo } from "@/utils";
 
 interface BusinessProjectProps {
   project: BusinessProject;
@@ -16,6 +17,11 @@ interface BusinessProjectProps {
 
 export default function BusinessProjectPage({ project }: BusinessProjectProps) {
   const [isPlaying, setIsPlaying] = useState(false);
+
+  const hasVideoWithPlaceholder =
+    project.assets.media &&
+    isVideo(project.assets.media.src) &&
+    project.assets.media.placeholder;
 
   return (
     <main className="w-full bg-white font-serif text-black">
@@ -77,27 +83,36 @@ export default function BusinessProjectPage({ project }: BusinessProjectProps) {
       <section className="mx-auto max-w-4xl px-6 py-30 text-center">
         <h2 className="mb-10 text-5xl font-bold">{project.assets.title}</h2>
 
-        {isPlaying || !project.assets.media?.placeholder ? (
-          <video
-            src={project.assets.media?.src}
-            controls
-            autoPlay={isPlaying}
-            className="mx-auto h-auto min-h-0 w-200 max-w-full rounded-lg"
-          />
-        ) : (
-          <div
-            className="inline-block cursor-pointer rounded-lg px-6 py-3 font-bold text-white transition-opacity hover:opacity-80"
-            onClick={() => setIsPlaying(true)}
-          >
+        {project.assets.media &&
+          (hasVideoWithPlaceholder && !isPlaying ? (
+            <div
+              className="inline-block cursor-pointer rounded-lg px-6 py-3 font-bold text-white transition-opacity hover:opacity-80"
+              onClick={() => setIsPlaying(true)}
+            >
+              <Media
+                src={project.assets.media.placeholder ?? ""}
+                alt={project.assets.media.alt ?? ""}
+                width={project.assets.media.width}
+                height={project.assets.media.height}
+                className={`h-auto w-200 max-w-full ${project.assets.media.className}`}
+              />
+            </div>
+          ) : hasVideoWithPlaceholder && isPlaying ? (
+            <video
+              src={project.assets.media.src}
+              controls
+              autoPlay
+              className="mx-auto h-auto min-h-0 w-200 max-w-full rounded-lg"
+            />
+          ) : (
             <Media
-              src={project.assets.media.placeholder}
+              src={project.assets.media.src}
               alt={project.assets.media.alt ?? ""}
               width={project.assets.media.width}
               height={project.assets.media.height}
               className={`h-auto w-200 max-w-full ${project.assets.media.className}`}
             />
-          </div>
-        )}
+          ))}
 
         <RichText
           content={project.assets.description ?? ""}
