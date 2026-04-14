@@ -2,14 +2,10 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import Media from "@/components/Media";
-import { MediaType } from "@/types";
+import { CarouselBlock } from "@/types";
 
-interface HeroCarouselProps {
-  carousel: MediaType[];
-}
-
-export default function HeroCarousel({ carousel }: HeroCarouselProps) {
-  const totalWidth = carousel.length * 360; // approximate card width + gap
+export default function HeroCarousel({ medias }: CarouselBlock) {
+  const totalWidth = medias.length * 360; // approximate card width + gap
   const [innerWidth, setInnerWidth] = useState(0);
 
   useEffect(() => {
@@ -37,7 +33,7 @@ export default function HeroCarousel({ carousel }: HeroCarouselProps) {
         }}
         whileHover={{ scale: 1.01 }}
       >
-        {carousel.concat(carousel).map((img, idx) => (
+        {medias.concat(medias).map((img, idx) => (
           <div
             key={idx}
             className="w-62.5 shrink-0 sm:w-70 md:w-[320px] lg:w-87.5"

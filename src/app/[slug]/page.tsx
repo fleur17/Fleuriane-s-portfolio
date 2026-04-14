@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Fragment, use } from "react";
 
 import BlockRenderer from "@/components/blocks/BlockRendered";
+import HeroBlock from "@/components/blocks/HeroBlock";
 import Separator from "@/components/Separator";
 import { projects } from "@/data/projects";
 
@@ -20,7 +21,9 @@ export default function ProjectPage({
   }
 
   return (
-    <>
+    <main className="w-full bg-white font-serif text-black">
+      <HeroBlock block={project.hero} />
+      <Separator />
       {project.steps.map((step, idx) => {
         return (
           <Fragment key={`frag-${idx}`}>
@@ -33,6 +36,6 @@ export default function ProjectPage({
           </Fragment>
         );
       })}
-    </>
+    </main>
   );
 }
