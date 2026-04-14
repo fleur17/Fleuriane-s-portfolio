@@ -1,7 +1,12 @@
+import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
 import Media from "@/components/Media";
 import type { MediaBlock, MediaType } from "@/types";
 
-export default function MediaBlock({ block }: { block: MediaBlock }) {
+interface MediaBlockProps extends BlockRendereBoilerplate {
+  block: MediaBlock;
+}
+
+export default function MediaBlock({ block }: MediaBlockProps) {
   const mediasCount = block.medias.length;
   const gridLayout = "grid grid-cols-1 gap-6 md:gap-10";
 
@@ -49,7 +54,7 @@ export default function MediaBlock({ block }: { block: MediaBlock }) {
   return (
     <>
       {block.medias && (
-        <div className={layout()}>
+        <div className={`mb-10 ${layout()}`}>
           {block.medias.map((media) => mediaWrapper(media))}
         </div>
       )}

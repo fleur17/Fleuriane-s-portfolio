@@ -1,8 +1,13 @@
+import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
 import type { TopicBlock } from "@/types";
 
-export default function TopicBlock({ block }: { block: TopicBlock }) {
+interface TopicBlockProps extends BlockRendereBoilerplate {
+  block: TopicBlock;
+}
+
+export default function TopicBlock({ block }: TopicBlockProps) {
   return (
-    <section className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-10 px-6 md:grid-cols-2 md:py-20 lg:py-30">
+    <div className="mx-auto mb-20 grid max-w-6xl grid-cols-1 items-start gap-10 px-6 md:grid-cols-2">
       <div className="flex flex-col justify-start md:ml-15">
         <h2 className="mb-6 text-5xl font-bold">{block.title}</h2>
         <p className="mt-6 text-lg leading-relaxed md:mt-10">{block.text}</p>
@@ -22,6 +27,6 @@ export default function TopicBlock({ block }: { block: TopicBlock }) {
           ))}
         </ul>
       </div>
-    </section>
+    </div>
   );
 }

@@ -1,7 +1,12 @@
+import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
 import RichText from "@/components/RichText";
 import type { ColumnBlock } from "@/types";
 
-export default function ColumnBlock({ block }: { block: ColumnBlock }) {
+interface ColumnBlockProps extends BlockRendereBoilerplate {
+  block: ColumnBlock;
+}
+
+export default function ColumnBlock({ block }: ColumnBlockProps) {
   const columnsCount = block.text.length;
 
   return (

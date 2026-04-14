@@ -1,15 +1,20 @@
 import { motion } from "framer-motion";
 
+import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
 import Media from "@/components/Media";
 import RichText from "@/components/RichText";
 import type { MixBlock } from "@/types";
 
-export default function MixBlock({ block }: { block: MixBlock }) {
+interface MixBlockProps extends BlockRendereBoilerplate {
+  block: MixBlock;
+}
+
+export default function MixBlock({ block }: MixBlockProps) {
   const isTextLeft = block.position === "left";
 
   return (
     <div
-      className={`flex items-center gap-10 ${isTextLeft ? "flex-row" : "flex-row-reverse"}`}
+      className={`flex gap-10 ${isTextLeft ? "flex-row" : "flex-row-reverse"}`}
     >
       <div className="flex-1 space-y-6">
         <motion.h2
@@ -21,10 +26,7 @@ export default function MixBlock({ block }: { block: MixBlock }) {
         >
           {block.title}
         </motion.h2>
-        <RichText
-          text={block.text}
-          className="mt-6 text-lg leading-relaxed md:mt-10"
-        />
+        <RichText text={block.text} className="mb-6 text-lg leading-relaxed" />
       </div>
 
       <motion.div

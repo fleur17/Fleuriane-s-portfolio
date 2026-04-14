@@ -1,8 +1,13 @@
 import { FileIcon } from "lucide-react";
 
+import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
 import type { DocumentBlock } from "@/types";
 
-export function DocumentBlock({ block }: { block: DocumentBlock }) {
+interface DocumentBlockProps extends BlockRendereBoilerplate {
+  block: DocumentBlock;
+}
+
+export function DocumentBlock({ block }: DocumentBlockProps) {
   return (
     <a
       href={block.src}

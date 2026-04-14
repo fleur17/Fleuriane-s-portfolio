@@ -1,11 +1,16 @@
 import { motion } from "framer-motion";
 
+import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
 import PersonaCard from "@/components/PersonaCard";
 import type { CardBlock } from "@/types";
 
-export default function CardBlock({ block }: { block: CardBlock }) {
+interface CardBlockProps extends BlockRendereBoilerplate {
+  block: CardBlock;
+}
+
+export default function CardBlock({ block }: CardBlockProps) {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20">
+    <>
       <motion.h2
         className="mb-6 text-center text-4xl font-bold"
         initial={{ opacity: 0, y: 30 }}
@@ -24,6 +29,6 @@ export default function CardBlock({ block }: { block: CardBlock }) {
           return <PersonaCard key={`persona-${idx}`} persona={persona} />;
         })}
       </div>
-    </section>
+    </>
   );
 }
