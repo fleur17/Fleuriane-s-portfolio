@@ -289,7 +289,8 @@ export const projects: Project[] = [
   },
   {
     title: "TeruBot",
-    subtitle: "A multifunctional elastic band turned fashionable",
+    subtitle:
+      "Materializing Collective Emotions Through an Embodied Robotic Metaphor",
     description:
       "TeruBot is a robot-app system that visualizes the emotional atmosphere of shared spaces. It turns collective feelings into a tangible robotic presence. Inspired by Teru Teru Bōzu, it reinterprets “good weather” as emotional well-being. Through simple animations, it displays group emotions in real time. It fosters emotional awareness and connection.",
     slug: "teru-bot",
