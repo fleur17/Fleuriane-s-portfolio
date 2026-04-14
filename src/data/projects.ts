@@ -718,4 +718,102 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "secret-valentines",
+    hero: {
+      title: "Secret Valentines",
+      subtitle:
+        "A modern, digital love letter delivery system for Valentine's Day.",
+    },
+    steps: [
+      {
+        blocks: [
+          {
+            type: "mix",
+            title: "About",
+            text: "Secret Valentine is an application designed to allow people to express their love and appreciation anonymously to their crush, friends, and loved ones. Think of it as a modern-day pigeon delivering your secret love letters, dressed up in a beautiful rosé, pink, and purple color palette representing the code of love.",
+            media: {
+              src: "/images/projects/secret-valentines/discover.png",
+              alt: "Discover your letters",
+              width: 1414,
+              height: 2000,
+            },
+            position: "left",
+          },
+        ],
+      },
+      {
+        blocks: [
+          {
+            type: "title",
+            text: "Goal & Purpose",
+          },
+          {
+            type: "text",
+            text: "Our purpose is to deliver a fun, safe, and engaging way to reveal your secret love. In a world that is overly connected, taking a moment to send an anonymous, thoughtful message brings back the charm of traditional love letters, modernized for today.",
+          },
+          {
+            type: "media",
+            medias: [
+              {
+                src: "/images/projects/secret-valentines/ui.jpg",
+                alt: "UI",
+                width: 1414,
+                height: 1885,
+              },
+              {
+                src: "/images/projects/secret-valentines/secret-valentines.jpg",
+                alt: "Secret Valentines",
+                width: 1414,
+                height: 2000,
+              },
+              {
+                src: "/images/projects/secret-valentines/letter.jpg",
+                alt: "Letter",
+                width: 731,
+                height: 908,
+              },
+            ],
+            mediasLayout: "grid",
+          },
+        ],
+      },
+      {
+        blocks: [
+          {
+            type: "title",
+            text: "Background & Story",
+          },
+          {
+            type: "text",
+            text: "We launched the first version of this app last year, and it was a massive success at our school! However, we became victims of our own success: our free-plan database quickly reached its maximum capacity, forcing us to constantly migrate between different email addresses to keep the service running.\nThis new and improved version is built to be more robust, scalable, and beautifully designed using modern web technologies to handle all the love letters you can send!",
+          },
+        ],
+      },
+      {
+        blocks: [
+          {
+            type: "title",
+            text: "Artistic Direction",
+          },
+          {
+            type: "text",
+            text: "- *Theme:* Saint Valentine's Day.\n- *Color Palette:* Rosé, shades of pink, and deep purples.\n- *Vibe:* Romantic, mysterious, modern, and engaging.",
+          },
+        ],
+      },
+      {
+        blocks: [
+          {
+            type: "title",
+            text: "Tech Stack & Architecture",
+          },
+          {
+            type: "text",
+            text: "Inside the app folder, this project has been reimagined with a modern stack to avoid the database issues from the past:\n- *Frontend:* React + TypeScript, Vite.\n- *Styling:* Tailwind CSS + Radix UI components (for accessible, elegant UI)\n- *Animations:* Framer Motion (for smooth, lovely transitions)\n- *Backend & Database:* Firebase (to support an active user base, ensuring reliable and scalable delivery of anonymous messages)",
+          },
+        ],
+      },
+    ],
+  },
 ];
