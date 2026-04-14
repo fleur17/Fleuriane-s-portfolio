@@ -10,12 +10,10 @@ export default function MediaBlock({ block }: { block: MediaBlock }) {
       return "flex w-full flex-col items-center gap-10";
     }
 
-    const colsClass =
-      mediasCount === 1
-        ? "md:grid-cols-1"
-        : mediasCount === 2
-          ? "md:grid-cols-2"
-          : "md:grid-cols-3";
+    let colsClass = "md:grid-cols-3";
+    if (mediasCount === 2) {
+      colsClass = "md:grid-cols-2";
+    }
 
     return `${gridLayout} ${colsClass}`;
   };
@@ -23,7 +21,10 @@ export default function MediaBlock({ block }: { block: MediaBlock }) {
   const isGrid = block.mediasLayout === "grid";
   const mediaWrapper = (media: MediaType) =>
     isGrid ? (
-      <div key={media.src}>
+      <div
+        key={media.src}
+        className={mediasCount === 1 ? "md:col-start-2" : ""}
+      >
         <Media
           src={media.src}
           alt={media.alt ?? ""}
