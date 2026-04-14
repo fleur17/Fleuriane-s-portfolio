@@ -43,7 +43,7 @@ export const projects: Project[] = [
           },
           {
             type: "text",
-            text: "After several long brainstorming sessions without success, our idea finally came when a team member arrived with a tupperware held together by an elastic band — a simple workaround that inspired the project.<br><br>We came up with the idea of a stylish cutlery holder for tupperware, using a wider elastic band for better stability and a leather finish for elegance. Soon, the concept expanded to notebooks, iPads, and more — that is how Elastup was born.",
+            text: "After several long brainstorming sessions without success, our idea finally came when a team member arrived with a tupperware held together by an elastic band — a simple workaround that inspired the project.\nWe came up with the idea of a stylish cutlery holder for tupperware, using a wider elastic band for better stability and a leather finish for elegance. Soon, the concept expanded to notebooks, iPads, and more — that is how Elastup was born.",
           },
           {
             type: "media",
@@ -154,7 +154,7 @@ export const projects: Project[] = [
           {
             type: "mix",
             title: "User Research & Insights",
-            text: "To understand the needs of actors, models, and agencies, I conducted user interviews, surveys, and competitive analysis. Key pain points emerged around profile discoverability, navigation, and visual clarity.<br>- Users struggle to quickly find relevant talent profiles.<br>- Mobile navigation is often cumbersome in existing platforms.<br>- Agencies need clear indicators of talent availability and experience.",
+            text: "To understand the needs of actors, models, and agencies, I conducted user interviews, surveys, and competitive analysis. Key pain points emerged around profile discoverability, navigation, and visual clarity.\n- Users struggle to quickly find relevant talent profiles.\n- Mobile navigation is often cumbersome in existing platforms.\n- Agencies need clear indicators of talent availability and experience.",
             media: {
               src: "/images/common/desk.jpg",
               width: 200,
@@ -313,7 +313,7 @@ export const projects: Project[] = [
           {
             type: "mix",
             title: "User Research & Insights",
-            text: "Through research including surveys and interviews with fashion shoppers, i manage to find some relevant points that could be resolved through my app.<br>- Users want personalized outfit suggestions.<br>- Fashion professionals struggle to keep their schedules updated.<br>- Retailers need smarter ways to showcase products with AI.",
+            text: "Through research including surveys and interviews with fashion shoppers, i manage to find some relevant points that could be resolved through my app.\n- Users want personalized outfit suggestions.\n- Fashion professionals struggle to keep their schedules updated.\n- Retailers need smarter ways to showcase products with AI.",
             media: {
               src: "/images/common/desk.jpg",
               width: 200,
@@ -377,10 +377,14 @@ export const projects: Project[] = [
               {
                 src: "/images/projects/ai-fashion/home_proto.svg",
                 alt: "Wireframe 1",
+                width: 390,
+                height: 844,
               },
               {
                 src: "/images/projects/ai-fashion/calendar-proto.svg",
                 alt: "Wireframe 2",
+                width: 390,
+                height: 844,
               },
             ],
             mediasLayout: "grid",
@@ -399,14 +403,20 @@ export const projects: Project[] = [
               {
                 src: "/images/projects/ai-fashion/home.svg",
                 alt: "Home page",
+                width: 390,
+                height: 844,
               },
               {
                 src: "/images/projects/ai-fashion/calendar.svg",
                 alt: "Calendar page",
+                width: 390,
+                height: 844,
               },
               {
                 src: "/images/projects/ai-fashion/chat.svg",
                 alt: "Chatbot page",
+                width: 390,
+                height: 844,
               },
             ],
             mediasLayout: "grid",

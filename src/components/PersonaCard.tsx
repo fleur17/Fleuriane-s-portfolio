@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
-import MarkdownText from "@/components/MarkdownText";
 import Media from "@/components/Media";
+import RichText from "@/components/RichText";
 import { Card } from "@/types";
 
 export default function PersonaCard({ persona }: { persona: Card }) {
@@ -24,7 +24,7 @@ export default function PersonaCard({ persona }: { persona: Card }) {
           ? `${persona.name}, ${persona.role}, ${persona.age}`
           : `${persona.role}, ${persona.age}`}
       </h3>
-      <MarkdownText text={persona.text} />
+      <RichText text={persona.text} />
     </motion.div>
   );
 }

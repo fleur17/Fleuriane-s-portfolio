@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
-import MarkdownText from "@/components/MarkdownText";
 import Media from "@/components/Media";
+import RichText from "@/components/RichText";
 import type { MixBlock } from "@/types";
 
 export default function MixBlock({ block }: { block: MixBlock }) {
@@ -21,7 +21,7 @@ export default function MixBlock({ block }: { block: MixBlock }) {
         >
           {block.title}
         </motion.h2>
-        <MarkdownText
+        <RichText
           text={block.text}
           className="mt-6 text-lg leading-relaxed md:mt-10"
         />

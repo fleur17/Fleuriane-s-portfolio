@@ -1,4 +1,4 @@
-import MarkdownText from "@/components/MarkdownText";
+import RichText from "@/components/RichText";
 import type { ColumnBlock } from "@/types";
 
 export default function ColumnBlock({ block }: { block: ColumnBlock }) {
@@ -13,7 +13,7 @@ export default function ColumnBlock({ block }: { block: ColumnBlock }) {
         }}
       >
         {block.text.map((t) => (
-          <MarkdownText
+          <RichText
             text={t}
             className="font-serif text-lg leading-relaxed text-black"
           />
