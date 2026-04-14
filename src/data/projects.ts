@@ -43,7 +43,7 @@ export const projects: Project[] = [
           },
           {
             type: "text",
-            text: "After several long brainstorming sessions without success, our idea finally came when a team member arrived with a tupperware held together by an elastic band — a simple workaround that inspired the project.\nWe came up with the idea of a stylish cutlery holder for tupperware, using a wider elastic band for better stability and a leather finish for elegance. Soon, the concept expanded to notebooks, iPads, and more — that is how Elastup was born.",
+            text: "After several long brainstorming sessions without success, our idea finally came when a team member arrived with a tupperware held together by an elastic band — a simple workaround that inspired the project.\n\nWe came up with the idea of a stylish cutlery holder for tupperware, using a wider elastic band for better stability and a leather finish for elegance. Soon, the concept expanded to notebooks, iPads, and more — that is how Elastup was born.",
           },
           {
             type: "media",
@@ -102,6 +102,7 @@ export const projects: Project[] = [
           {
             type: "title",
             text: "Campaign Video",
+            position: "center",
           },
           {
             type: "video",
@@ -207,10 +208,12 @@ export const projects: Project[] = [
           {
             type: "title",
             text: "Low-Fidelity Prototyping",
+            position: "center",
           },
           {
             type: "text",
             text: "To quickly iterate on design concepts, I developed low-fidelity wireframes focusing on layout, navigation, and core functionalities.",
+            position: "center",
           },
           {
             type: "media",
@@ -233,10 +236,12 @@ export const projects: Project[] = [
           {
             type: "title",
             text: "High-Fidelity Prototyping",
+            position: "center",
           },
           {
             type: "text",
             text: "Interactive prototypes were created to validate flows and test usability before development.",
+            position: "center",
           },
           {
             type: "media",
@@ -277,10 +282,12 @@ export const projects: Project[] = [
           {
             type: "title",
             text: "Next Steps",
+            position: "center",
           },
           {
             type: "text",
             text: "Conduct usability testing with real users, refine micro-interactions, and collaborate with developers to ensure design fidelity during implementation.",
+            position: "center",
           },
         ],
       },
@@ -366,10 +373,12 @@ export const projects: Project[] = [
           {
             type: "title",
             text: "Low-Fidelity Prototyping",
+            position: "center",
           },
           {
             type: "text",
             text: "Sketches and wireframes mapping out AI-driven user flows",
+            position: "center",
           },
           {
             type: "media",
@@ -392,10 +401,12 @@ export const projects: Project[] = [
           {
             type: "title",
             text: "High-Fidelity Prototyping",
+            position: "center",
           },
           {
             type: "text",
             text: "Prototypes showcasing AI features and the different pages of the app",
+            position: "center",
           },
           {
             type: "media",
@@ -428,10 +439,12 @@ export const projects: Project[] = [
           {
             type: "title",
             text: "Next Steps",
+            position: "center",
           },
           {
             type: "text",
             text: "Further user testing to refine AI recommendations and to improve the user flow of the app",
+            position: "center",
           },
         ],
       },

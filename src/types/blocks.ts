@@ -1,6 +1,6 @@
 import { Card, MediaLayout, MediaType } from "@/types";
 
-export type Position = "left" | "right";
+export type Position = "left" | "right" | "center";
 
 export type HeroBlock = {
   title: string;
@@ -24,11 +24,13 @@ export type TopicBlock = {
 export type TitleBlock = {
   type: "title";
   text: string;
+  position?: Position;
 };
 
 export type TextBlock = {
   type: "text";
   text: string;
+  position?: Position;
 };
 
 export type MediaBlock = {
