@@ -256,6 +256,12 @@ export const projects: Project[] = [
                 width: 390,
                 height: 844,
               },
+            ],
+            mediasLayout: "grid",
+          },
+          {
+            type: "media",
+            medias: [
               {
                 src: "/images/projects/newfaces/final-page.svg",
                 width: 390,

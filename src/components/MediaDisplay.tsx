@@ -9,7 +9,7 @@ export default function MediaDisplay({ medias }: MediaDisplayProps) {
   return (
     <>
       {medias.medias &&
-        (medias.mediaLayout === "grid" ? (
+        (medias.mediasLayout === "grid" ? (
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-10">
             {medias.medias.map((media) => (
               <div
