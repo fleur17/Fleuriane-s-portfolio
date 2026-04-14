@@ -1,7 +1,8 @@
+import { FileIcon } from "lucide-react";
 import Image from "next/image";
 
 import { MediaType } from "@/types";
-import { isVideo } from "@/utils";
+import { isDocument, isVideo } from "@/utils";
 
 export default function Media({
   src,
@@ -22,6 +23,16 @@ export default function Media({
           controls
           playsInline
         />
+      ) : isDocument(src) ? (
+        <a
+          href={src}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-flex items-center justify-center gap-2 underline hover:opacity-70 ${className}`}
+        >
+          <FileIcon size={20} />
+          {alt ?? src.split("/").pop()}
+        </a>
       ) : (
         <Image
           src={src}

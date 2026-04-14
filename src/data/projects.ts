@@ -491,11 +491,10 @@ export const projects: Project[] = [
       title: "Files (source code, 3D models, hardware schematics)",
       description:
         "You can find all the files and 3D models on our GitHub: [Teru Corp](https://github.com/Teru-Corp)",
-      // media: {
-      //   src: "/videos/projects/teru-bot/app.mp4",
-      //   width: 460,
-      //   height: 1000,
-      // },
+      media: {
+        src: "/documents/projects/teru-bot/TeruBot_Chi_paper_2026.pdf",
+        alt: "TeruBot_Chi_paper_2026.pdf",
+      },
     },
   },
 ];
