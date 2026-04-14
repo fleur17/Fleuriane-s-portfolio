@@ -12,11 +12,8 @@ export const projects: Project[] = [
       {
         blocks: [
           {
-            type: "title",
-            text: "Description of the product",
-          },
-          {
             type: "topic",
+            title: "Description of the product",
             text: "The Elastup is a versatile and stylish accessory designed to tackle everyday challenges. Combining a durable elastic band with croûte de veau leather, this innovative product features horizontal slots that securely hold pens, cutlery, and other small essentials.",
             topics: [
               "Business project",
@@ -130,15 +127,23 @@ export const projects: Project[] = [
         medias: [
           {
             src: "/images/projects/newfaces/home-page-2.svg",
+            width: 390,
+            height: 844,
           },
           {
             src: "/images/projects/newfaces/courses-page.svg",
+            width: 390,
+            height: 844,
           },
           {
             src: "/images/projects/newfaces/portfolio.svg",
+            width: 390,
+            height: 844,
           },
           {
             src: "/images/projects/newfaces/final-page.svg",
+            width: 390,
+            height: 844,
           },
         ],
       },
@@ -147,11 +152,8 @@ export const projects: Project[] = [
       {
         blocks: [
           {
-            type: "title",
-            text: "User Research & Insights",
-          },
-          {
             type: "mix",
+            title: "User Research & Insights",
             text: "To understand the needs of actors, models, and agencies, I conducted user interviews, surveys, and competitive analysis. Key pain points emerged around profile discoverability, navigation, and visual clarity.<br>- Users struggle to quickly find relevant talent profiles.<br>- Mobile navigation is often cumbersome in existing platforms.<br>- Agencies need clear indicators of talent availability and experience.",
             media: {
               src: "/images/common/desk.jpg",
@@ -166,11 +168,8 @@ export const projects: Project[] = [
       {
         blocks: [
           {
-            type: "title",
-            text: "User Personas",
-          },
-          {
             type: "card",
+            title: "User Personas",
             text: "Based on the research, I created detailed personas to guide design decisions.",
             cards: [
               {
@@ -219,10 +218,14 @@ export const projects: Project[] = [
               {
                 src: "/images/projects/newfaces/proto-1.svg",
                 alt: "Wireframe 1",
+                width: 390,
+                height: 844,
               },
               {
                 src: "/images/projects/newfaces/proto-2.svg",
                 alt: "Wireframe 2",
+                width: 390,
+                height: 844,
               },
             ],
             mediasLayout: "grid",
@@ -240,19 +243,23 @@ export const projects: Project[] = [
             medias: [
               {
                 src: "/images/projects/newfaces/home-page-2.svg",
-                alt: "Landing Page",
+                width: 390,
+                height: 844,
               },
               {
                 src: "/images/projects/newfaces/courses-page.svg",
-                alt: "Courses",
+                width: 390,
+                height: 844,
               },
               {
                 src: "/images/projects/newfaces/portfolio.svg",
-                alt: "Portfolio Detail",
+                width: 390,
+                height: 844,
               },
               {
                 src: "/images/projects/newfaces/final-page.svg",
-                alt: "Portfolio Detail",
+                width: 390,
+                height: 844,
               },
             ],
             mediasLayout: "grid",
@@ -298,11 +305,8 @@ export const projects: Project[] = [
       {
         blocks: [
           {
-            type: "title",
-            text: "User Research & Insights",
-          },
-          {
             type: "mix",
+            title: "User Research & Insights",
             text: "Through research including surveys and interviews with fashion shoppers, i manage to find some relevant points that could be resolved through my app.<br>- Users want personalized outfit suggestions.<br>- Fashion professionals struggle to keep their schedules updated.<br>- Retailers need smarter ways to showcase products with AI.",
             media: {
               src: "/images/common/desk.jpg",
@@ -317,11 +321,8 @@ export const projects: Project[] = [
       {
         blocks: [
           {
-            type: "title",
-            text: "User Personas",
-          },
-          {
             type: "card",
+            title: "User Personas",
             text: "Those are fictionnal personas that helped me define user needs and refine AI-powered features.",
             cards: [
               {
@@ -432,11 +433,8 @@ export const projects: Project[] = [
       {
         blocks: [
           {
-            type: "title",
-            text: "Description of the product",
-          },
-          {
             type: "topic",
+            title: "Description of the product",
             text: "TeruBot is a robot-app system that visualizes the emotional atmosphere of shared spaces. It turns collective feelings into a tangible robotic presence. Inspired by Teru Teru Bōzu, it reinterprets “good weather” as emotional well-being. Through simple animations, it displays group emotions in real time. It fosters emotional awareness and connection.",
             topics: [
               "Collective emotion in shared spaces",
@@ -666,7 +664,6 @@ export const projects: Project[] = [
                     alt: "Features",
                     width: 2048,
                     height: 817,
-                    fullWidth: true,
                   },
                 ],
                 mediasLayout: "full-width",
