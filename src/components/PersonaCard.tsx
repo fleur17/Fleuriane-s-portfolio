@@ -1,22 +1,10 @@
 import { motion } from "framer-motion";
 
+import MarkdownText from "@/components/MarkdownText";
 import Media from "@/components/Media";
+import { Card } from "@/types";
 
-interface PersonaCardProps {
-  name: string;
-  age: number;
-  goals: string;
-  painPoints: string;
-  img: string;
-}
-
-export default function PersonaCard({
-  name,
-  age,
-  goals,
-  painPoints,
-  img,
-}: PersonaCardProps) {
+export default function PersonaCard({ persona }: { persona: Card }) {
   return (
     <motion.div
       className="rounded-3xl bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
@@ -25,21 +13,18 @@ export default function PersonaCard({
       viewport={{ once: true }}
     >
       <Media
-        src={img}
-        width={200}
-        height={200}
-        alt={name}
+        src={persona.model.src}
+        width={persona.model.width ?? 200}
+        height={persona.model.height ?? 200}
+        alt={persona.model.alt ?? persona.model.src}
         className="mx-auto mb-4 rounded-full"
       />
       <h3 className="text-xl font-bold">
-        {name}, {age}
+        {persona.name
+          ? `${persona.name}, ${persona.role}, ${persona.age}`
+          : `${persona.role}, ${persona.age}`}
       </h3>
-      <p className="mt-2 text-black">
-        <strong>Goals:</strong> {goals}
-      </p>
-      <p className="mt-1 text-black">
-        <strong>Pain Points:</strong> {painPoints}
-      </p>
+      <MarkdownText text={persona.text} />
     </motion.div>
   );
 }
