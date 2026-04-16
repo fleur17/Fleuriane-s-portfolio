@@ -355,11 +355,20 @@ export const projects: Project[] = [
       {
         blocks: [
           {
-            type: "card",
-            title: "User Personas",
+            type: "title",
+            text: "User Personas",
+            position: "center",
+          },
+          {
+            type: "text",
             text: "Based on the research, I created detailed personas to guide design decisions.",
+            position: "center",
+          },
+          {
+            type: "card",
             cards: [
               {
+                type: "persona",
                 model: {
                   src: "/images/common/woman.png",
                 },
@@ -369,6 +378,7 @@ export const projects: Project[] = [
                 text: "**Goals:** Find opportunities and showcase portfolio easily<br>**Pain Points:** Navigation confusion, poor image layout",
               },
               {
+                type: "persona",
                 model: {
                   src: "/images/common/man.png",
                 },
@@ -378,6 +388,7 @@ export const projects: Project[] = [
                 text: "**Goals:** Get noticed by agencies quickly<br>**Pain Points:** Unclear profile visibility and metrics",
               },
               {
+                type: "persona",
                 model: {
                   src: "/images/common/woman.png",
                 },
@@ -402,22 +413,23 @@ export const projects: Project[] = [
             position: "center",
           },
           {
-            type: "media",
-            medias: [
+            type: "card",
+            cards: [
               {
+                type: "media",
                 src: "/images/projects/newfaces/proto-1.svg",
                 alt: "Wireframe 1",
-                width: 390,
-                height: 844,
+                width: 350,
+                height: 550,
               },
               {
+                type: "media",
                 src: "/images/projects/newfaces/proto-2.svg",
                 alt: "Wireframe 2",
-                width: 390,
-                height: 844,
+                width: 350,
+                height: 550,
               },
             ],
-            mediasLayout: "grid",
           },
           {
             type: "title",
@@ -430,36 +442,37 @@ export const projects: Project[] = [
             position: "center",
           },
           {
-            type: "media",
-            medias: [
+            type: "card",
+            cards: [
               {
+                type: "media",
                 src: "/images/projects/newfaces/home-page-2.svg",
                 width: 390,
                 height: 844,
+                title: "Landing Page",
               },
               {
+                type: "media",
                 src: "/images/projects/newfaces/courses-page.svg",
                 width: 390,
                 height: 844,
+                title: "Courses",
               },
               {
+                type: "media",
                 src: "/images/projects/newfaces/portfolio.svg",
                 width: 390,
                 height: 844,
+                title: "Portfolio Details",
               },
-            ],
-            mediasLayout: "grid",
-          },
-          {
-            type: "media",
-            medias: [
               {
+                type: "media",
                 src: "/images/projects/newfaces/final-page.svg",
                 width: 390,
                 height: 844,
+                title: "Portfolio Details",
               },
             ],
-            mediasLayout: "grid",
           },
         ],
       },
@@ -520,11 +533,20 @@ export const projects: Project[] = [
       {
         blocks: [
           {
-            type: "card",
-            title: "User Personas",
+            type: "title",
+            text: "User Personas",
+            position: "center",
+          },
+          {
+            type: "text",
             text: "Those are fictionnal personas that helped me define user needs and refine AI-powered features.",
+            position: "center",
+          },
+          {
+            type: "card",
             cards: [
               {
+                type: "persona",
                 model: {
                   src: "/images/common/woman.png",
                 },
@@ -534,6 +556,7 @@ export const projects: Project[] = [
                 text: "**Goals:** Discover new outfits instantly using AI<br>**Pain Points:** Hard to match clothes with her style",
               },
               {
+                type: "persona",
                 model: {
                   src: "/images/common/man.png",
                 },
@@ -543,6 +566,7 @@ export const projects: Project[] = [
                 text: "**Goals:** Being more informed about the fashion world<br>**Pain Points:** Not enough time to stay properly informed",
               },
               {
+                type: "persona",
                 model: {
                   src: "/images/common/woman.png",
                 },

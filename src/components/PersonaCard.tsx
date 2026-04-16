@@ -1,17 +1,10 @@
-import { motion } from "framer-motion";
-
 import Media from "@/components/Media";
 import RichText from "@/components/RichText";
-import { Card } from "@/types";
+import type { PersonaCard } from "@/types/card";
 
-export default function PersonaCard({ persona }: { persona: Card }) {
+export default function PersonaCard({ persona }: { persona: PersonaCard }) {
   return (
-    <motion.div
-      className="rounded-3xl bg-white p-6 text-center shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-    >
+    <>
       <Media
         src={persona.model.src}
         width={persona.model.width ?? 200}
@@ -25,6 +18,6 @@ export default function PersonaCard({ persona }: { persona: Card }) {
           : `${persona.role}, ${persona.age}`}
       </h3>
       <RichText text={persona.text} />
-    </motion.div>
+    </>
   );
 }

@@ -1,4 +1,5 @@
-import { Card, MediaLayout, MediaType } from "@/types";
+import { MediaLayout, MediaType } from "@/types";
+import { Card } from "@/types/card";
 
 export type Position = "left" | "right" | "center";
 
@@ -66,8 +67,6 @@ export type ColumnBlock = {
 
 export type CardBlock = {
   type: "card";
-  title: string;
-  text: string;
   cards: Card[];
 };
 

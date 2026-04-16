@@ -1,4 +1,4 @@
-import { Block, MediaType } from "@/types";
+import { Block } from "@/types";
 
 export type NavLink = {
   href: string;
@@ -8,12 +8,4 @@ export type NavLink = {
 export type Step = {
   blocks: Block[];
   substeps?: Step[];
-};
-
-export type Card = {
-  model: MediaType;
-  name?: string;
-  role: string;
-  age: number;
-  text: string;
 };

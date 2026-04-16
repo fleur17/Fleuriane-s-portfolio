@@ -1,7 +1,5 @@
-import { motion } from "framer-motion";
-
 import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
-import PersonaCard from "@/components/PersonaCard";
+import CardRenderer from "@/components/blocks/CardRenderer";
 import type { CardBlock } from "@/types";
 
 interface CardBlockProps extends BlockRendererBoilerplate {
@@ -9,25 +7,19 @@ interface CardBlockProps extends BlockRendererBoilerplate {
 }
 
 export default function CardBlock({ block }: CardBlockProps) {
+  const cardCount = block.cards.length;
+
+  let colsClass = "md:grid-cols-3";
+  if (cardCount === 2) {
+    colsClass = "md:grid-cols-2";
+  }
+
   return (
     <>
-      <motion.h2
-        className="mb-6 text-center text-4xl font-bold"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
+      <div
+        className={`flex flex-col items-stretch justify-center gap-8 sm:flex-row`}
       >
-        {block.title}
-      </motion.h2>
-      <p className="mx-auto mb-12 max-w-3xl text-center text-lg">
-        {block.text}
-      </p>
-
-      <div className="grid gap-10 md:grid-cols-3">
-        {block.cards.map((persona, idx) => {
-          return <PersonaCard key={`persona-${idx}`} persona={persona} />;
-        })}
+        <CardRenderer block={block} />
       </div>
     </>
   );
