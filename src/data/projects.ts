@@ -904,14 +904,17 @@ export const projects: Project[] = [
           {
             type: "title",
             text: "Files (source code, 3D models, hardware schematics)",
+            position: "center",
           },
           {
             type: "text",
             text: "You can find all the files and 3D models on our GitHub: [Teru Corp](https://github.com/Teru-Corp)",
+            position: "center",
           },
           {
             type: "document",
             src: "/documents/projects/teru-bot/TeruBot_Chi_paper_2026.pdf",
+            position: "center",
           },
         ],
       },
@@ -985,7 +988,7 @@ export const projects: Project[] = [
           },
           {
             type: "text",
-            text: "We launched the first version of this app last year, and it was a massive success at our school! However, we became victims of our own success: our free-plan database quickly reached its maximum capacity, forcing us to constantly migrate between different email addresses to keep the service running.\nThis new and improved version is built to be more robust, scalable, and beautifully designed using modern web technologies to handle all the love letters you can send!",
+            text: "We launched the first version of this app last year, and it was a massive success at our school! However, we became victims of our own success: our free-plan database quickly reached its maximum capacity, forcing us to constantly migrate between different email addresses to keep the service running.\n\nThis new and improved version is built to be more robust, scalable, and beautifully designed using modern web technologies to handle all the love letters you can send!",
           },
         ],
       },
