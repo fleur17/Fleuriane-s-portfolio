@@ -70,6 +70,11 @@ export type CardBlock = {
   cards: Card[];
 };
 
+export type CustomBlock = {
+  type: "custom";
+  component: string;
+};
+
 export type Block =
   | CarouselBlock
   | TopicBlock
@@ -80,4 +85,5 @@ export type Block =
   | DocumentBlock
   | MixBlock
   | ColumnBlock
-  | CardBlock;
+  | CardBlock
+  | CustomBlock;
