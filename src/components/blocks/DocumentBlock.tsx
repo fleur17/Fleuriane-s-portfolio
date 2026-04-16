@@ -8,12 +8,14 @@ interface DocumentBlockProps extends BlockRendererBoilerplate {
 }
 
 export function DocumentBlock({ block }: DocumentBlockProps) {
+  const layout = block.position === "center" ? "justify-center" : "";
+
   return (
     <a
       href={block.src}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-2 underline hover:opacity-70`}
+      className={`inline-flex items-center gap-2 underline hover:opacity-70 ${layout}`}
     >
       <FileIcon size={20} />
       {block.alt ?? block.src.split("/").pop()}

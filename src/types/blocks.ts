@@ -48,6 +48,7 @@ export type DocumentBlock = {
   type: "document";
   src: string;
   alt?: string;
+  position?: Position;
 };
 
 export type MixBlock = {
