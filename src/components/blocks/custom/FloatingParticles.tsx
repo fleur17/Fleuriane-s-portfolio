@@ -8,8 +8,8 @@ for (let i = 0; i < particlesCount * 3; i++) {
   positions[i] = (Math.random() - 0.5) * 10;
 }
 
-// Particle cloud component
 export default function FloatingParticles() {
+  const pointsRef = useRef<Points>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -23,8 +23,6 @@ export default function FloatingParticles() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const pointsRef = useRef<Points>(null);
-
   const geometry = useMemo(() => {
     const geom = new BufferGeometry();
     geom.setAttribute("position", new BufferAttribute(positions, 3));
@@ -32,10 +30,7 @@ export default function FloatingParticles() {
   }, []);
 
   const material = useMemo(() => {
-    return new PointsMaterial({
-      color: "#69363d",
-      size: 0.05,
-    });
+    return new PointsMaterial({ color: "#69363d", size: 0.05 });
   }, []);
 
   useFrame(() => {

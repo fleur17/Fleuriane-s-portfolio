@@ -34,10 +34,10 @@ export const projects: Project[] = [
             text: "The EEG captures the frequency that changes in our brain and TouchDesigner maps those signals into the moving visuals you see on the screen. TouchDesigner allows us to connect with the EEG headset and translate the brainwave patterns particularly into visual forms.",
             position: "center",
           },
-          // {
-          //   type: "custom",
-          //   component: "floating-particles",
-          // },
+          {
+            type: "custom",
+            component: "floating-particles",
+          },
         ],
       },
       {
