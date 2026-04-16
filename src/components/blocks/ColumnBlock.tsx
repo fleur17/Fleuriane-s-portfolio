@@ -1,8 +1,8 @@
-import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
+import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
 import RichText from "@/components/RichText";
 import type { ColumnBlock } from "@/types";
 
-interface ColumnBlockProps extends BlockRendereBoilerplate {
+interface ColumnBlockProps extends BlockRendererBoilerplate {
   block: ColumnBlock;
 }
 
@@ -10,7 +10,7 @@ export default function ColumnBlock({ block }: ColumnBlockProps) {
   const columnsCount = block.text.length;
 
   return (
-    <div className="bg-beige w-full py-16">
+    <div className="bg-beige mb-6 w-full py-16">
       <div
         className="mx-auto grid max-w-5xl gap-10 px-6 md:divide-x md:divide-black"
         style={{

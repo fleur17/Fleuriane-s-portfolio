@@ -1,7 +1,7 @@
-import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
+import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
 import type { TopicBlock } from "@/types";
 
-interface TopicBlockProps extends BlockRendereBoilerplate {
+interface TopicBlockProps extends BlockRendererBoilerplate {
   block: TopicBlock;
 }
 

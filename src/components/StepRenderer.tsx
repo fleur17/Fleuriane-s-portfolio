@@ -1,6 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
 
-import BlockRenderer from "@/components/blocks/BlockRendered";
+import BlockRenderer from "@/components/blocks/BlockRenderer";
 import Separator from "@/components/Separator";
 import { Step } from "@/types";
 

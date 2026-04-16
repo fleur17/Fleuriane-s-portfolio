@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
+import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
 import Media from "@/components/Media";
 import type { VideoBlock } from "@/types";
 
-interface VideoBlockProps extends BlockRendereBoilerplate {
+interface VideoBlockProps extends BlockRendererBoilerplate {
   block: VideoBlock;
 }
 

@@ -1,8 +1,8 @@
-import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
+import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
 import RichText from "@/components/RichText";
 import type { TextBlock } from "@/types";
 
-interface TextBlockProps extends BlockRendereBoilerplate {
+interface TextBlockProps extends BlockRendererBoilerplate {
   block: TextBlock;
 }
 

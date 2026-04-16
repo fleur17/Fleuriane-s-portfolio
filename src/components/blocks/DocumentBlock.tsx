@@ -1,9 +1,9 @@
 import { FileIcon } from "lucide-react";
 
-import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
+import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
 import type { DocumentBlock } from "@/types";
 
-interface DocumentBlockProps extends BlockRendereBoilerplate {
+interface DocumentBlockProps extends BlockRendererBoilerplate {
   block: DocumentBlock;
 }
 

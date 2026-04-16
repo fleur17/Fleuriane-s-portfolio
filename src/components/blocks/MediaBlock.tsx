@@ -1,8 +1,8 @@
-import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
+import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
 import Media from "@/components/Media";
 import type { MediaBlock, MediaType } from "@/types";
 
-interface MediaBlockProps extends BlockRendereBoilerplate {
+interface MediaBlockProps extends BlockRendererBoilerplate {
   block: MediaBlock;
 }
 

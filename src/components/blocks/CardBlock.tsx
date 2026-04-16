@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
-import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
+import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
 import PersonaCard from "@/components/PersonaCard";
 import type { CardBlock } from "@/types";
 
-interface CardBlockProps extends BlockRendereBoilerplate {
+interface CardBlockProps extends BlockRendererBoilerplate {
   block: CardBlock;
 }
 

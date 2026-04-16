@@ -1,5 +1,6 @@
 import CardBlock from "@/components/blocks/CardBlock";
 import ColumnBlock from "@/components/blocks/ColumnBlock";
+import CustomBlock from "@/components/blocks/CustomBlock";
 import { DocumentBlock } from "@/components/blocks/DocumentBlock";
 import MediaBlock from "@/components/blocks/MediaBlock";
 import MixBlock from "@/components/blocks/MixBlock";
@@ -9,12 +10,12 @@ import TopicBlock from "@/components/blocks/TopicBlock";
 import VideoBlock from "@/components/blocks/VideoBlock";
 import { Block } from "@/types";
 
-export interface BlockRendereBoilerplate {
+export interface BlockRendererBoilerplate {
   className?: string;
   depth?: number;
 }
 
-interface BlockRendererProps extends BlockRendereBoilerplate {
+interface BlockRendererProps extends BlockRendererBoilerplate {
   block: Block;
 }
 
@@ -44,6 +45,8 @@ export default function BlockRenderer({
       return <ColumnBlock block={block} className={className} depth={depth} />;
     case "card":
       return <CardBlock block={block} className={className} depth={depth} />;
+    case "custom":
+      return <CustomBlock block={block} className={className} depth={depth} />;
     default:
       return null;
   }

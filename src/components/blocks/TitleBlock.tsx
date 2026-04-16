@@ -1,8 +1,8 @@
-import { BlockRendereBoilerplate } from "@/components/blocks/BlockRendered";
+import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
 import type { TitleBlock } from "@/types";
 import { sizeClass } from "@/utils";
 
-interface TitleBlockProps extends BlockRendereBoilerplate {
+interface TitleBlockProps extends BlockRendererBoilerplate {
   block: TitleBlock;
 }
 
