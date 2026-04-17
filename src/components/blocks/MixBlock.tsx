@@ -18,7 +18,7 @@ export default function MixBlock({ block }: MixBlockProps) {
     >
       <div className="flex-1 space-y-6">
         <motion.h2
-          className="mb-6 text-4xl font-bold"
+          className="mt-20 mb-6 text-4xl font-bold first:mt-0"
           initial={{ opacity: 0, x: isTextLeft ? -50 : 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}

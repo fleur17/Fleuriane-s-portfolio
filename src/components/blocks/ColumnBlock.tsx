@@ -19,6 +19,7 @@ export default function ColumnBlock({ block }: ColumnBlockProps) {
       >
         {block.text.map((t) => (
           <RichText
+            key={t}
             text={t}
             className="font-serif text-lg leading-relaxed text-black"
           />
