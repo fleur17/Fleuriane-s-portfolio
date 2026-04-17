@@ -4,7 +4,7 @@ export const projectsDisplays: ProjectDisplayData[] = [
   {
     textSection: {
       projectType: "ART PROJECT",
-      name: "The NeuroPortals",
+      name: "The NeuroPortal",
       description: "What if you can be the master of your brain through art ?",
       href: "/neuroportal",
       media: {

@@ -3,8 +3,9 @@
 import { notFound } from "next/navigation";
 import { use } from "react";
 
-import AppProjectPage from "@/components/pages/AppProjectPage";
-import BusinessProjectPage from "@/components/pages/BusinessProjectPage";
+import HeroBlock from "@/components/blocks/HeroBlock";
+import Separator from "@/components/Separator";
+import StepRenderer from "@/components/StepRenderer";
 import { projects } from "@/data/projects";
 
 export default function ProjectPage({
@@ -19,12 +20,18 @@ export default function ProjectPage({
     notFound();
   }
 
-  switch (project.layout) {
-    case "app-project":
-      return <AppProjectPage project={project} />;
-    case "business-project":
-      return <BusinessProjectPage project={project} />;
-    default:
-      notFound();
-  }
+  return (
+    <main className="w-full bg-white font-serif text-black">
+      <HeroBlock block={project.hero} />
+      <Separator />
+      {project.steps.map((step, idx) => (
+        <StepRenderer
+          key={`step-${idx}`}
+          step={step}
+          index={idx}
+          totalSteps={project.steps.length}
+        />
+      ))}
+    </main>
+  );
 }
