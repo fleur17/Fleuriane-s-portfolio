@@ -1,5 +1,3 @@
-import { Fragment } from "react/jsx-runtime";
-
 import BlockRenderer from "@/components/blocks/BlockRenderer";
 import Separator from "@/components/Separator";
 import { Step } from "@/types";
@@ -20,7 +18,7 @@ export default function StepRenderer({
   const paddingClass = depth === 0 ? "py-30" : "py-5";
 
   return (
-    <Fragment>
+    <>
       <section
         className={`mx-auto flex max-w-6xl flex-col px-6 ${paddingClass}`}
       >
@@ -44,6 +42,6 @@ export default function StepRenderer({
         ))}
       </section>
       {depth === 0 && index < totalSteps - 1 && <Separator />}
-    </Fragment>
+    </>
   );
 }

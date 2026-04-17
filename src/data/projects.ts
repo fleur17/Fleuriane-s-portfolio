@@ -591,22 +591,23 @@ export const projects: Project[] = [
             position: "center",
           },
           {
-            type: "media",
-            medias: [
+            type: "card",
+            cards: [
               {
+                type: "media",
                 src: "/images/projects/ai-fashion/home_proto.svg",
                 alt: "Wireframe 1",
                 width: 390,
                 height: 844,
               },
               {
+                type: "media",
                 src: "/images/projects/ai-fashion/calendar-proto.svg",
                 alt: "Wireframe 2",
                 width: 390,
                 height: 844,
               },
             ],
-            mediasLayout: "grid",
           },
           {
             type: "title",
@@ -619,28 +620,30 @@ export const projects: Project[] = [
             position: "center",
           },
           {
-            type: "media",
-            medias: [
+            type: "card",
+            cards: [
               {
+                type: "media",
                 src: "/images/projects/ai-fashion/home.svg",
                 alt: "Home page",
                 width: 390,
                 height: 844,
               },
               {
+                type: "media",
                 src: "/images/projects/ai-fashion/calendar.svg",
                 alt: "Calendar page",
                 width: 390,
                 height: 844,
               },
               {
+                type: "media",
                 src: "/images/projects/ai-fashion/chat.svg",
                 alt: "Chatbot page",
                 width: 390,
                 height: 844,
               },
             ],
-            mediasLayout: "grid",
           },
         ],
       },

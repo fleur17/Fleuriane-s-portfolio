@@ -26,7 +26,17 @@ export default function MixBlock({ block }: MixBlockProps) {
         >
           {block.title}
         </motion.h2>
-        <RichText text={block.text} className="mb-6 text-lg leading-relaxed" />
+        <motion.div
+          initial={{ opacity: 0, x: isTextLeft ? -50 : 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+        >
+          <RichText
+            text={block.text}
+            className="mb-6 text-lg leading-relaxed"
+          />
+        </motion.div>
       </div>
 
       <motion.div

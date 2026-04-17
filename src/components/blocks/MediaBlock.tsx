@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
 import Media from "@/components/Media";
 import type { MediaBlock, MediaType } from "@/types";
@@ -54,9 +56,15 @@ export default function MediaBlock({ block }: MediaBlockProps) {
   return (
     <>
       {block.medias && (
-        <div className={`mb-10 ${layout()}`}>
+        <motion.div
+          className={`mb-10 ${layout()}`}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           {block.medias.map((media) => mediaWrapper(media))}
-        </div>
+        </motion.div>
       )}
     </>
   );

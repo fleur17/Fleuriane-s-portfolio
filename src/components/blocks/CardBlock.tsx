@@ -7,13 +7,6 @@ interface CardBlockProps extends BlockRendererBoilerplate {
 }
 
 export default function CardBlock({ block }: CardBlockProps) {
-  const cardCount = block.cards.length;
-
-  let colsClass = "md:grid-cols-3";
-  if (cardCount === 2) {
-    colsClass = "md:grid-cols-2";
-  }
-
   return (
     <>
       <div
