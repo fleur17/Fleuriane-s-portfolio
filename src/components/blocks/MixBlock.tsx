@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
-import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
 import Media from "@/components/Media";
+import { BlockRendererBoilerplate } from "@/components/renderers/BlockRenderer";
 import RichText from "@/components/RichText";
 import type { MixBlock } from "@/types";
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
+import { BlockRendererBoilerplate } from "@/components/renderers/BlockRenderer";
 import type { TitleBlock } from "@/types";
 import { sizeClass } from "@/utils";
 

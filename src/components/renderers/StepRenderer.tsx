@@ -1,4 +1,4 @@
-import BlockRenderer from "@/components/blocks/BlockRenderer";
+import BlockRenderer from "@/components/renderers/BlockRenderer";
 import Separator from "@/components/Separator";
 import { Step } from "@/types";
 

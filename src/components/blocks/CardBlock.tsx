@@ -1,5 +1,7 @@
-import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
-import CardRenderer from "@/components/blocks/CardRenderer";
+import { motion } from "framer-motion";
+
+import { BlockRendererBoilerplate } from "@/components/renderers/BlockRenderer";
+import CardRenderer from "@/components/renderers/CardRenderer";
 import type { CardBlock } from "@/types";
 
 interface CardBlockProps extends BlockRendererBoilerplate {
@@ -9,11 +11,15 @@ interface CardBlockProps extends BlockRendererBoilerplate {
 export default function CardBlock({ block }: CardBlockProps) {
   return (
     <>
-      <div
+      <motion.div
         className={`flex flex-col items-stretch justify-center gap-8 sm:flex-row`}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
       >
         <CardRenderer block={block} />
-      </div>
+      </motion.div>
     </>
   );
 }

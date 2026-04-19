@@ -1,7 +1,8 @@
 import { Canvas } from "@react-three/fiber";
+import { motion } from "framer-motion";
 
-import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
 import FloatingParticles from "@/components/blocks/custom/FloatingParticles";
+import { BlockRendererBoilerplate } from "@/components/renderers/BlockRenderer";
 import type { CustomBlock } from "@/types";
 
 interface CustomBlockProps extends BlockRendererBoilerplate {
@@ -19,14 +20,20 @@ export default function CustomBlockRenderer({ block }: CustomBlockProps) {
 
   if (block.component === "floating-particles") {
     return (
-      <div className="relative h-175 w-full">
+      <motion.div
+        className="relative h-175 w-full"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <Canvas
           className="absolute inset-0 z-0"
           camera={{ position: [0, 0, 10], fov: 50 }}
         >
           <Component />
         </Canvas>
-      </div>
+      </motion.div>
     );
   }
 

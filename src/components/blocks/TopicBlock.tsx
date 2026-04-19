@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
+import { BlockRendererBoilerplate } from "@/components/renderers/BlockRenderer";
 import type { TopicBlock } from "@/types";
 
 interface TopicBlockProps extends BlockRendererBoilerplate {

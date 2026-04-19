@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FileIcon } from "lucide-react";
 
-import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
+import { BlockRendererBoilerplate } from "@/components/renderers/BlockRenderer";
 import type { DocumentBlock } from "@/types";
 
 interface DocumentBlockProps extends BlockRendererBoilerplate {
