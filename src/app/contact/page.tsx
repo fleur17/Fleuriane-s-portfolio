@@ -41,19 +41,15 @@ export default function ContactPage() {
 
   return (
     <div className="relative min-h-screen bg-white">
-      {/* PAGE CONTENT */}
       <div className="mx-auto max-w-2xl px-6 pt-40 pb-52">
-        {/* TITLE */}
         <h1 className="text-center font-['Shippori_Mincho_B1:ExtraBold'] text-[48px] tracking-wide text-black">
           Contact
         </h1>
 
-        {/* SUBTEXT */}
         <p className="mt-4 text-center font-['Crimson_Text'] text-[20px] text-neutral-700">
           Feel free to reach out for collaborations, inquiries or information.
         </p>
 
-        {/* FORM CONTAINER */}
         <div className="mt-20">
           {submitted ? (
             <p className="text-center font-['Crimson_Text'] text-[22px] text-black">
@@ -61,7 +57,6 @@ export default function ContactPage() {
             </p>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-10">
-              {/* NAME */}
               <div className="flex flex-col gap-2">
                 <label className="font-['Shippori_Mincho_B1:Medium'] text-[18px] text-black">
                   Name
@@ -76,7 +71,6 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* EMAIL */}
               <div className="flex flex-col gap-2">
                 <label className="font-['Shippori_Mincho_B1:Medium'] text-[18px] text-black">
                   Email
@@ -91,7 +85,6 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* MESSAGE */}
               <div className="flex flex-col gap-2">
                 <label className="font-['Shippori_Mincho_B1:Medium'] text-[18px] text-black">
                   Message
@@ -106,7 +99,6 @@ export default function ContactPage() {
                 />
               </div>
 
-              {/* SUBMIT BUTTON */}
               <button
                 type="submit"
                 className="mx-auto mt-12 block border border-black px-10 py-3 font-['Crimson_Text'] text-[20px] text-black transition-all duration-300 hover:bg-black hover:text-white"
@@ -116,7 +108,6 @@ export default function ContactPage() {
             </form>
           )}
         </div>
-        {/* FORM NOTE */}
         <p className="mt-6 text-center font-['Crimson_Text'] text-[16px] text-black">
           Or contact me directly at{" "}
           <a

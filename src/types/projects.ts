@@ -17,3 +17,11 @@ export type Project = {
   hero: HeroBlock;
   steps: Step[];
 };
+
+export type ProjectShowcase = {
+  slug: string;
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+};
