@@ -1,6 +1,6 @@
 "use client";
 
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "@/components/cards/ProjectCard";
 import { projectsShowcases } from "@/data/projects-showcases";
 
 export default function ShowcasePage() {

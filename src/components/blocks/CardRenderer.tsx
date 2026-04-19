@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
+import PersonaCard from "@/components/cards/PersonaCard";
 import Media from "@/components/Media";
-import PersonaCard from "@/components/PersonaCard";
 import { CardBlock } from "@/types";
 import { Card } from "@/types/card";
 

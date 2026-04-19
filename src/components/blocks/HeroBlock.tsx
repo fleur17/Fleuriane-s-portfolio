@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import HeroCarousel from "@/components/HeroCarousel";
+import HeroCarousel from "@/components/blocks/HeroCarousel";
 import type { HeroBlock } from "@/types";
 
 export default function HeroBlock({ block }: { block: HeroBlock }) {
@@ -32,9 +32,7 @@ export default function HeroBlock({ block }: { block: HeroBlock }) {
         >
           {block.subtitle}
         </motion.p>
-        {block.carousel && (
-          <HeroCarousel medias={block.carousel.medias} type={"carousel"} />
-        )}
+        {block.carousel && <HeroCarousel block={block.carousel} />}
       </div>
     </section>
   );
