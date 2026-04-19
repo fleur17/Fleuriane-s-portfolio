@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import Media from "@/components/Media";
-import { CarouselBlock } from "@/types";
+import type { CarouselBlock } from "@/types";
 
-export default function HeroCarousel({ block }: { block: CarouselBlock }) {
+export default function CarouselBlock({ block }: { block: CarouselBlock }) {
   const totalWidth = block.medias.length * 360; // approximate card width + gap
   const [innerWidth, setInnerWidth] = useState(0);
 
