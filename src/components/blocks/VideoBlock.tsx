@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 
-import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
 import Media from "@/components/Media";
+import { BlockRendererBoilerplate } from "@/components/renderers/BlockRenderer";
 import type { VideoBlock } from "@/types";
 
 interface VideoBlockProps extends BlockRendererBoilerplate {
@@ -12,7 +13,13 @@ export default function VideoBlock({ block }: VideoBlockProps) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="flex justify-center">
+    <motion.div
+      className="flex justify-center"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       {isPlaying || !block.media?.placeholder ? (
         <video
           src={block.media?.src}
@@ -34,6 +41,6 @@ export default function VideoBlock({ block }: VideoBlockProps) {
           />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }

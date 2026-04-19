@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import { use } from "react";
 
 import HeroBlock from "@/components/blocks/HeroBlock";
+import StepRenderer from "@/components/renderers/StepRenderer";
 import Separator from "@/components/Separator";
-import StepRenderer from "@/components/StepRenderer";
 import { projects } from "@/data/projects";
 
 export default function ProjectPage({

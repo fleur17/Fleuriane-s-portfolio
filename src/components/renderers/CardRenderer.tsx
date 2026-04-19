@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 import PersonaCard from "@/components/cards/PersonaCard";
 import Media from "@/components/Media";
 import { CardBlock } from "@/types";
@@ -42,17 +40,13 @@ function renderCard(card: Card) {
 
 export default function CardRenderer({ block }: CardRendererProps) {
   return block.cards.map((card, idx) => (
-    <motion.div
+    <div
       key={idx}
       className={`overflow-hidden rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl ${
         card.type === "persona" ? "flex-1 bg-white p-6 text-center" : ""
       }`}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
     >
       {renderCard(card)}
-    </motion.div>
+    </div>
   ));
 }

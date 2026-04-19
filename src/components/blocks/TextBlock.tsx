@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import { BlockRendererBoilerplate } from "@/components/blocks/BlockRenderer";
+import { BlockRendererBoilerplate } from "@/components/renderers/BlockRenderer";
 import RichText from "@/components/RichText";
 import type { TextBlock } from "@/types";
 
