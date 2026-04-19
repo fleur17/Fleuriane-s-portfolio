@@ -17,7 +17,7 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
 
     const mailtoLink = `mailto:fleurianelam77@hotmail.com?subject=Contact from ${encodeURIComponent(
