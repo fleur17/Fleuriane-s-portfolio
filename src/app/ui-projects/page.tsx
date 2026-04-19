@@ -3,32 +3,8 @@
 import { motion } from "framer-motion";
 
 import Media from "@/components/Media";
+import { uiProjects } from "@/data/ui-projects";
 
-/* ========================= UI IMAGES ========================= */
-const uiImages = [
-  {
-    src: "/images/projects/ui-projects/timer-project.svg",
-    label: "Timer Project – UI Exploration",
-  },
-  {
-    src: "/images/projects/ui-projects/iphone-interface.svg",
-    label: "iPhone Interface – Visual Concept",
-  },
-  {
-    src: "/images/projects/ui-projects/nadz-model.svg",
-    label: "Fashion social media – App UI",
-  },
-  {
-    src: "/images/projects/ui-projects/spotify-redesign.svg",
-    label: "Spotify Redesign – UI Concept",
-  },
-  {
-    src: "/images/projects/ui-projects/be-real-emotions.svg",
-    label: "Emotion Capture – UI Design",
-  },
-];
-
-/* ========================= PAGE ========================= */
 export default function UIShowcasePage() {
   return (
     <main className="w-full bg-white font-serif text-black">
@@ -39,7 +15,6 @@ export default function UIShowcasePage() {
         </p>
       </section>
 
-      {/* ========================= HERO IMAGE WALL ========================= */}
       <section className="mx-auto max-w-7xl px-6 py-24">
         <motion.div
           className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3"
@@ -52,7 +27,7 @@ export default function UIShowcasePage() {
             },
           }}
         >
-          {uiImages.map((item, idx) => (
+          {uiProjects.map((item, idx) => (
             <motion.div
               key={idx}
               variants={{
@@ -70,7 +45,6 @@ export default function UIShowcasePage() {
                 className="h-auto w-full object-cover"
               />
 
-              {/* DESCRIPTION */}
               <div className="bg-white p-4 text-center">
                 <p className="text-sm text-gray-700">{item.label}</p>
               </div>

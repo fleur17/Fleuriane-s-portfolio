@@ -30,7 +30,6 @@ export default function StepRenderer({
           />
         ))}
 
-        {/* Recursively render substeps */}
         {step.substeps?.map((substep, substepIdx) => (
           <StepRenderer
             key={`${depth}-substep-${substepIdx}`}
