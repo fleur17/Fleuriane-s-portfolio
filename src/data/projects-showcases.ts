@@ -18,7 +18,7 @@ export const projectsShowcases: ProjectShowcase[] = [
     image: "/images/projects/elastup/elastup.png",
   },
   {
-    slug: "new-models",
+    slug: "newfaces",
     title: "Fashion courses app",
     category: "App / UX-UI Design",
     description:
