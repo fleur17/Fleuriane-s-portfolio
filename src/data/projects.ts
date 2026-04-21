@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     slug: "neuroportal",
     hero: {
-      title: "The Neuroportal",
+      title: "The NeuroPortal",
       background: "/images/projects/neuroportal/background.svg",
     },
     steps: [

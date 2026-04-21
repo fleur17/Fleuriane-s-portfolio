@@ -27,7 +27,7 @@ export const projectsShowcases: ProjectShowcase[] = [
   },
   {
     slug: "images/projects/ai-fashion/ai-fashion",
-    title: "IA Fashion",
+    title: "AI Fashion",
     category: "App / UI-UX Design",
     description:
       "An app that help users to discover fashion styles using AI technology.",
