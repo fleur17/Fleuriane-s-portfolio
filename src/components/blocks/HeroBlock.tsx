@@ -24,14 +24,16 @@ export default function HeroBlock({ block }: { block: HeroBlock }) {
         >
           {block.title}
         </motion.h1>
-        <motion.p
-          className="max-w-3xl text-lg leading-relaxed md:text-xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          {block.subtitle}
-        </motion.p>
+        {block.subtitle && (
+          <motion.p
+            className="max-w-3xl text-lg leading-relaxed md:text-xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            {block.subtitle}
+          </motion.p>
+        )}
         {block.carousel && <CarouselBlock block={block.carousel} />}
       </div>
     </section>
