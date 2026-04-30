@@ -6,7 +6,7 @@ export const projectsDisplays: ProjectDisplayData[] = [
       projectType: "ART PROJECT",
       name: "The NeuroPortal",
       description: "What if you can be the master of your brain through art ?",
-      href: "/neuroportal",
+      href: "neuroportal",
       media: {
         src: "/images/common/touchdesigner.svg",
         width: 150,
@@ -37,7 +37,7 @@ export const projectsDisplays: ProjectDisplayData[] = [
       projectType: "BUSINESS PROJECT",
       name: "The Elastup",
       description: "For your notebook, Tupperware and more ...",
-      href: "/elastup",
+      href: "elastup",
       media: {
         src: "/images/common/kickstarter-logo.svg",
         width: 200,
@@ -60,7 +60,7 @@ export const projectsDisplays: ProjectDisplayData[] = [
       projectType: "UX/UI PROJECT",
       name: "NewFaces",
       description: "The App that will teach you all about fashion!",
-      href: "/newfaces",
+      href: "newfaces",
       media: {
         src: "/images/common/figma-logo.svg",
         width: 150,
@@ -83,7 +83,7 @@ export const projectsDisplays: ProjectDisplayData[] = [
       projectType: "UX/UI PROJECT",
       name: "AI Fashion",
       description: "Designing an AI-powered fashion ecosystem",
-      href: "/ai-fashion",
+      href: "ai-fashion",
       media: {
         src: "/images/common/figma-logo.svg",
         width: 150,
@@ -107,7 +107,7 @@ export const projectsDisplays: ProjectDisplayData[] = [
       name: "TeruBot",
       description:
         "Materializing collective emotions through an embodied robotic metaphor",
-      href: "/teru-bot",
+      href: "teru-bot",
       media: {
         src: "/images/common/figma-logo.svg",
         width: 150,
@@ -131,7 +131,7 @@ export const projectsDisplays: ProjectDisplayData[] = [
       name: "Secret Valentines",
       description:
         "A modern, digital love letter delivery system for Valentine's Day.",
-      href: "/secret-valentines",
+      href: "secret-valentines",
       media: {
         src: "/images/common/figma-logo.svg",
         width: 150,
