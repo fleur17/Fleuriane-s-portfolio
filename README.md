@@ -75,7 +75,6 @@ src/
   components/       # Reusable React components
   data/             # Static data files (projects, etc.)
   types/            # Shared TypeScript types
-  assets/           # Local assets imported in code
 public/
   images/
     common/         # Shared assets (logo, icons, tool logos)
@@ -84,13 +83,13 @@ public/
       neuroportal/
       elastup/
       ...
+  documents/
+  videos/
 ```
 
 ## Adding a New Project
 
-1. Add the project entry to `src/data/projects.ts`
-2. Add project images to `public/images/projects/<project-slug>/`
-3. Create the project detail page at `src/app/<project-slug>/page.tsx`
+Read `docs/manual.md` file
 
 ## CI
 
