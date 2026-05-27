@@ -41,7 +41,12 @@ export default defineConfig([
     },
 
     rules: {
-      "prettier/prettier": "error",
+      "prettier/prettier": [
+        "error",
+        {
+          endOfLine: "auto",
+        },
+      ],
       "react-refresh/only-export-components": "warn",
       "@typescript-eslint/no-unused-vars": [
         "warn",
