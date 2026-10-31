@@ -12,7 +12,7 @@ Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS. Dep
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) >= 18
+- [Node.js](https://nodejs.org/) >= 26
 - [pnpm](https://pnpm.io/) (recommended), [npm](https://www.npmjs.com/), or [yarn](https://yarnpkg.com/)
 
 ## Getting Started
