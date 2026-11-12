@@ -1,6 +1,6 @@
 import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
-import importPlugin from "eslint-plugin-import";
+import { importX } from "eslint-plugin-import-x";
 import prettierPlugin from "eslint-plugin-prettier";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
@@ -26,7 +26,7 @@ export default defineConfig([
     plugins: {
       prettier: prettierPlugin,
       "simple-import-sort": simpleImportSort,
-      import: importPlugin,
+      "import-x": importX,
     },
 
     languageOptions: {
@@ -35,7 +35,7 @@ export default defineConfig([
     },
 
     settings: {
-      "import/resolver": {
+      "import-x/resolver": {
         typescript: true,
       },
     },
@@ -54,8 +54,8 @@ export default defineConfig([
       ],
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
-      "import/order": "off",
-      "import/no-unresolved": "error",
+      "import-x/order": "off",
+      "import-x/no-unresolved": "error",
     },
   },
 ]);
